@@ -6,9 +6,12 @@
 
 /* step 2 */
 //declare the phrase class 
-    /*test code 
-        const phrase = new phrase();
-        this test won't show a noticable change but can be tested in the console 
-    */
-   /*step 3 */
-   //create a constructor method inside class
+    /*test code */
+ /*step 3 */
+   /*create a constructor method inside class
+    *phrase class has one parameter 'phrase' 
+        **properties phrase class contains 
+        *phrase: this is the actual phrase the phrase object is representing. this property
+            should be set to the 'phrase' parameter but converted to all lower case 
+*/
+//test code in apps.js
