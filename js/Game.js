@@ -10,6 +10,11 @@
 
 /*step 2 */
 // declare the game class 
+class Game {
+     constructor () {
+          
+     }
+}
     /* test code in app.js
     
     this test won't show a noticable change but can be tested in the console 
