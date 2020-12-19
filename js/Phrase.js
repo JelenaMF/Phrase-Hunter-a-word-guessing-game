@@ -7,8 +7,8 @@
 /* step 2 */
 //declare the phrase class 
 class Phrase {
-    constructor () {
-        
+    constructor (phrase) {
+        this.phrase = phrase;
     }
 }
     /*test code */

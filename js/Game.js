@@ -3,6 +3,14 @@
  * Game.js */
 /* step one */
 //create a game class methods for starting and ending the game 
+class Game {
+     constructor (missed, phrases, activePhrase) {
+          this.missed = missed;
+          this.phrases = phrases;
+          this.activePhrase = activePhrase;
+     }
+     
+}
 //handle interactions
 //get a random phrase 
 //check for wins 
@@ -10,11 +18,7 @@
 
 /*step 2 */
 // declare the game class 
-class Game {
-     constructor () {
-          
-     }
-}
+
     /* test code in app.js
     
     this test won't show a noticable change but can be tested in the console 
