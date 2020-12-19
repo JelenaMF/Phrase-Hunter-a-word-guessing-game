@@ -2,6 +2,12 @@
  * Project 4 - OOP Game App
  * app.js */
 //add a new instance of the game class 
+class Players {
+    constructor () {
+        
+    }
+
+}
     /*testing declared classes
     const game = new game();
     const phrase = new phrase();

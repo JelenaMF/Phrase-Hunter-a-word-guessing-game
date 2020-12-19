@@ -6,6 +6,11 @@
 
 /* step 2 */
 //declare the phrase class 
+class Phrase {
+    constructor () {
+        
+    }
+}
     /*test code */
  /*step 3 */
    /*create a constructor method inside class
