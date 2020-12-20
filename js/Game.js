@@ -4,7 +4,7 @@
 /* step one */
 //create a game class methods for starting and ending the game 
 class Game {
-     constructor (missed, phrases, activePhrase) {
+     constructor () {
           this.missed = missed;
           this.phrases = phrases;
           this.activePhrase = activePhrase;

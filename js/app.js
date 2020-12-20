@@ -3,8 +3,8 @@
  * app.js */
 //add a new instance of the game class 
 const game = new Game();
-const phrase = new Phrase('Life is like a box of chocolates.');
-console.log(Phrase.phrase);
+const Phrase1 = new Phrase('Life is like a box of chocolates.');
+console.log(Phrase1.phrase);
     /*testing declared classes
     const game = new Game();
     const phrase = new phrase();
