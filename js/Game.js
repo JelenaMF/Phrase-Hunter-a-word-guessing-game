@@ -3,32 +3,28 @@
  * Game.js */
 /* step one */
 //create a game class methods for starting and ending the game 
-class Game {
-     constructor () {
-          // this.missed = missed;
-          // this.phrases = phrases;
-          // this.activePhrase = activePhrase;
-     }
-     
-}
 //handle interactions
 //get a random phrase 
 //check for wins 
 //remove life from the scoreboard.
+class Game {
+     constructor () {
+          this.missed = 0;
+          this.phrases = [];
+          this.activePhrase = 'null';
+     }
+     createPhrase(phrases) {
+          const phrases = [
+               
+          ]
+     }
+}
+/* step 4
+     inside the Game class create method called 'createPhrase() that creates and returns 
+     an array of 5 new Phrase objects and then set the 'phrases' property to call that 
+     method.
 
-/*step 2 */
-// declare the game class 
-
-    /* test code in app.js
-    
-    this test won't show a noticable change but can be tested in the console 
-    */
-   /*step 3 */
-   //create a constructor method inside class
-   /*game class constructor should be left empty with no parameter.
-        *Properties
-        **missed: (tracks the number of missed guesses by the player. initial value is 0 
-                    for no guesses start)
-        **phrases: an array of phrase objects to use with the game. initially an empty array
-        **activePhrase: this would be the current phrase object in play. initial value is 'null'
-   */
+     ** don't forget to pass the actual string phrase that the Phrase object is representing
+     A string phrase should only include letters and spaces-- no numbers punctuation
+     or other special characters. 
+*/
