@@ -5,9 +5,9 @@
 //create a game class methods for starting and ending the game 
 class Game {
      constructor () {
-          this.missed = missed;
-          this.phrases = phrases;
-          this.activePhrase = activePhrase;
+          // this.missed = missed;
+          // this.phrases = phrases;
+          // this.activePhrase = activePhrase;
      }
      
 }
