@@ -11,3 +11,11 @@ document.querySelector('#btn__reset').addEventListener('click', (e) => {
     console.log('phrase');
 
 });
+/* step 4 
+    test the Game class 'phrases' property that was initialized and populated. 
+    using temporary code 
+    using the variable game above and 
+    game.phrases.forEach((phrase, index) => {
+        console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
+    });
+*/  

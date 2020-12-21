@@ -13,10 +13,8 @@ class Game {
           this.phrases = [];
           this.activePhrase = 'null';
      }
-     createPhrase(phrases) {
-          const phrases = [
-               
-          ]
+     createPhrase() {
+        
      }
 }
 /* step 4
