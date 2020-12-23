@@ -16,7 +16,7 @@
      class Game {
           constructor () {
                this.missed = 0;
-               this.phrases = createPhrase();
+               this.phrases = this.createPhrase();
                this.activePhrase = 'null';
           }
           createPhrase() {
