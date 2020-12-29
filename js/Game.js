@@ -22,7 +22,9 @@
                return phrases;
           }
           getRandomPhrase() {
-               
+               const phraseIndex = Math.floor(Math.random() * this.phrases.length);
+               const randomPhrase = this.phrases[phraseIndex];
+               return randomPhrase;
           }
      }
 
