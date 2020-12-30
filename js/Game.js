@@ -10,21 +10,22 @@
      class Game {
           constructor () {
                this.missed = 0;
-               this.phrases = this.createPhrase();
+               this.phrase = this.createPhrase();
                this.activePhrase = 'null';
           }
           createPhrase() {
-               const phrases = [new Phrase('Another one bites the dust'),
+               const phrase = [new Phrase('Another one bites the dust'),
                               new Phrase('Skeletons in the closet'),
                               new Phrase('Bury your head in the sand'),
                               new Phrase('Keep your friends close, but your enemies closer'),
                               new Phrase('Show me the money')];
-               return phrases;
+               return phrase;
           }
           getRandomPhrase() {
-               const phraseIndex = Math.floor(Math.random() * this.phrases.length);
-               const randomPhrase = this.phrases[phraseIndex];
+               const phraseIndex = Math.floor(Math.random() * this.phrase.length);
+               const randomPhrase = Game.phrase[phraseIndex];
                return randomPhrase;
+               console.log(randomPhrase)
           }
      }
 
