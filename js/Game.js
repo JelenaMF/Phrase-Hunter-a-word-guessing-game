@@ -23,7 +23,7 @@
           }
           getRandomPhrase() {
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
-               const randomPhrase = Game.phrase[phraseIndex];
+               const randomPhrase = this.phrase[phraseIndex];
                return randomPhrase;
                console.log(randomPhrase)
           }
