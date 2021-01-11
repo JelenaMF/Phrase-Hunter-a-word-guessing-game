@@ -11,7 +11,7 @@
           constructor () {
                this.missed = 0;
                this.phrase = this.createPhrase();
-               this.activePhrase = 'null';
+               this.activePhrase = this.getRandomPhrase();
           }
           createPhrase() {
                const phrase = [new Phrase('Another one bites the dust'),

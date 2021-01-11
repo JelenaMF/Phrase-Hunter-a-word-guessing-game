@@ -9,15 +9,15 @@ const game = new Game()
 // game.phrases.forEach((phrase, index) => {
 //     console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
 // });
-const logPhrase = (phrase) => {
-    console.log(`Phrase - phrase: `, phrase.phrase);
-};
-
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
-logPhrase(game.getRandomPhrase());
+// const logPhrase = (phrase) => {
+//     console.log(`Phrase - phrase: `, phrase.phrase);
+// };
+game.getRandomPhrase().addPhraseToDisplay();
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
+// logPhrase(game.getRandomPhrase());
 //console.log(game);
 //add event listener for the start button and onscreen keyboard buttons 
 document.querySelector('#btn__reset').addEventListener('click', (e) => {
