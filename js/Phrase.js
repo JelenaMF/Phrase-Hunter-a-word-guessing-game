@@ -15,13 +15,13 @@ class Phrase {
             phraseLi.classList.add('hide-letter');
             phraseUL.appendChild(phraseLi);
             if(char === '') {
-                phraseLi.className = 'space';
-                phraseLi.innerText = ' ';
+                phraseLi.classList.add('space');
+                phraseLi.innerHTML = ' ';
             } else{
-                phraseLi.className = 'hide';
-                phraseLi.className = 'letter';
+                phraseLi.classList.add('hide');
+                phraseLi.classList.add('letter');
                 phraseLi.className = `${char}`;
-                phraseLi.innerText = char;
+                phraseLi.innerHTML = char;
             }
         }
              console.log(phraseUL);
