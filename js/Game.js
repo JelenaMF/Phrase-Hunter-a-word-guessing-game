@@ -10,10 +10,10 @@
      class Game {
           constructor () {
                this.missed = 0;
-               this.phrase = this.createPhrase();
+               this.phrase = this.createPhrases();
                this.activePhrase = this.getRandomPhrase();
           }
-          createPhrase() {
+          createPhrases() {
                const phrase = [new Phrase('Another one bites the dust'),
                               new Phrase('Skeletons in the closet'),
                               new Phrase('Bury your head in the sand'),

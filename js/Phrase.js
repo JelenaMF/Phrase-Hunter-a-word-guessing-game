@@ -9,14 +9,17 @@ class Phrase {
     }
     addPhraseToDisplay() {
         const phraseUL = document.querySelector('#phrase ul');
-        const phraseLi = document.createElement('li');
-        phraseLi.classList.add('letter-hidden');
-        phraseUL.appendChild(phraseLi);  
+            
         for(const el of this.phrase) {
-            if(this.phrase === /^[A-Za-z]+$/) {
+            const phraseLi = document.createElement('li');
+            phraseLi.classList.add('hide-letter');
+            phraseUL.appendChild(phraseLi);
+            if(document.querySelector('#qwerty') === game.activePhrase) {
+                phraseLi.classList.remove('hide-letter');
                 phraseLi.classList.add('letter');
+                phraseLi.textContent = this.phrase;
             }
-            if(this.phrase === /\s/.test(this.phrase)){
+            if(game.activePhrase === /\s/.test(game.activePhrase)){
                 phraseLi.classList.add('space');
             }
         }

@@ -21,6 +21,7 @@ game.getRandomPhrase().addPhraseToDisplay();
 //console.log(game);
 //add event listener for the start button and onscreen keyboard buttons 
 document.querySelector('#btn__reset').addEventListener('click', (e) => {
-    console.log('start game button working!');
+    document.getElementById('overlay').style.display = 'none';
+    
 
 });
