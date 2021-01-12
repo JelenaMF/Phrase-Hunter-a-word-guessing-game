@@ -12,16 +12,16 @@ class Phrase {
             
         for(const char of this.phrase) {
             const phraseLi = document.createElement('li');
-            phraseLi.classList.add('hide-letter');
+           //phraseLi.classList.add('hide-letter');
             phraseUL.appendChild(phraseLi);
-            if(char === '') {
+            if(char === ' ') {
                 phraseLi.classList.add('space');
-                phraseLi.innerHTML = ' ';
+                //phraseLi.textContent = ' ';
             } else{
-                phraseLi.classList.add('hide');
-                phraseLi.classList.add('letter');
-                phraseLi.className = `${char}`;
-                phraseLi.innerHTML = char;
+                //phraseLi.classList.add('section');
+               phraseLi.classList.add('letter');
+                phraseLi.textContent = char;
+                //phraseLi.className = `${char}`;
             }
         }
              console.log(phraseUL);
