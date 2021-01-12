@@ -12,15 +12,15 @@ class Phrase {
         const phraseLi = document.createElement('li');
         phraseLi.classList.add('letter-hidden');
         phraseUL.appendChild(phraseLi);  
-        
-        console.log(phraseUL);
-        //add letter placeholders to the display when game starts
-        //each letter is represented by an empty box give each letter an <li> element
-            /* call <ul> in <div> with id 'phrase' 
-                append <li> with class name "hide letter" to ul 
-                if (letter === letter.charAt()) {
-                    give <li> class attribute "show letter"
-                }*/
+        for(const el of this.phrase) {
+            if(this.phrase === /^[A-Za-z]+$/) {
+                phraseLi.classList.add('letter');
+            }
+            if(this.phrase === /\s/.test(this.phrase)){
+                phraseLi.classList.add('space');
+            }
+        }
+             console.log(phraseUL);
     }
     checkLetter() {
         //checks to see if the letters selected by player matches letters in the phrase.
