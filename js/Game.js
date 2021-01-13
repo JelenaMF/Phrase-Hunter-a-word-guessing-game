@@ -11,7 +11,7 @@
           constructor () {
                this.missed = 0;
                this.phrase = this.createPhrases();
-               this.activePhrase = this.getRandomPhrase();
+               this.activePhrase = null;
           }
           createPhrases() {
                const phrase = [new Phrase('Another one bites the dust'),
@@ -29,8 +29,8 @@
           }
           startGame() {
                document.getElementById('overlay').style.display = 'none';
-               this.activePhrase;
-               //this.addPhraseToDisplay();
+               this.activePhrase = this.getRandomPhrase();
+               this.activePhrase.addPhraseToDisplay();
           }
      }
 

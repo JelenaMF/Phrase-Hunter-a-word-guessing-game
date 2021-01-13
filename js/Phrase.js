@@ -7,19 +7,22 @@ class Phrase {
     constructor(phrase) {
         this.phrase = phrase.toLowerCase();
     }
+    //method displays phrase 
     addPhraseToDisplay() {
-        const phraseUL = document.querySelector('#phrase ul');
-            
+        const phraseUL = document.querySelector('#phrase ul'); 
         for(const char of this.phrase) {
             const phraseLi = document.createElement('li');
-            phraseUL.appendChild(phraseLi);
+            phraseUL.appendChild(phraseLi); 
+            phraseLi.classList.add('hide'); 
             if(char === ' ') {
                 phraseLi.classList.add('space');
             } else{
                 phraseLi.classList.add('letter');
+                phraseLi.classList.add(char);
                 phraseLi.textContent = char;
             }
         }
+        console.log(phraseUL);
     }
     checkLetter() {
         //checks to see if the letters selected by player matches letters in the phrase.
