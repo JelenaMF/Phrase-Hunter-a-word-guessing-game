@@ -21,6 +21,7 @@
                               new Phrase('Show me the money')];
                return phrase;
           }
+          //makes the above createdPhrases populate randomly.
           getRandomPhrase() {
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
                const randomPhrase = this.phrase[phraseIndex];
@@ -31,6 +32,9 @@
                document.getElementById('overlay').style.display = 'none';
                this.activePhrase = this.getRandomPhrase();
                this.activePhrase.addPhraseToDisplay();
+          }
+          handleInteractions() {
+               
           }
      }
 
