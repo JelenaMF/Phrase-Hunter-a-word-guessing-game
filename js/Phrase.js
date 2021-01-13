@@ -12,19 +12,14 @@ class Phrase {
             
         for(const char of this.phrase) {
             const phraseLi = document.createElement('li');
-           //phraseLi.classList.add('hide-letter');
             phraseUL.appendChild(phraseLi);
             if(char === ' ') {
                 phraseLi.classList.add('space');
-                //phraseLi.textContent = ' ';
             } else{
-                //phraseLi.classList.add('section');
-               phraseLi.classList.add('letter');
+                phraseLi.classList.add('letter');
                 phraseLi.textContent = char;
-                //phraseLi.className = `${char}`;
             }
         }
-             console.log(phraseUL);
     }
     checkLetter() {
         //checks to see if the letters selected by player matches letters in the phrase.

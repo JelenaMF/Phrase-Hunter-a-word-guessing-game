@@ -27,5 +27,10 @@
                return randomPhrase;
                console.log(randomPhrase)
           }
+          startGame() {
+               document.getElementById('overlay').style.display = 'none';
+               this.activePhrase;
+               //this.addPhraseToDisplay();
+          }
      }
 
