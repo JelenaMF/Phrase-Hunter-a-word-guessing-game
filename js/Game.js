@@ -17,7 +17,7 @@
                const phrase = [new Phrase('Another one bites the dust'),
                               new Phrase('Skeletons in the closet'),
                               new Phrase('Bury your head in the sand'),
-                              new Phrase('Keep your friends close, but your enemies closer'),
+                              new Phrase('Keep your friends close but your enemies closer'),
                               new Phrase('Show me the money')];
                return phrase;
           }
