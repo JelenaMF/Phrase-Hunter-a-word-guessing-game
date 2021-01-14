@@ -29,7 +29,11 @@ class Phrase {
     }
     showMatchedLetters() {
         /*reveals letters on the board that matches a letter in the phrase 
-
+            const letter = document.querySelectorAll('.letter');
+            /if (letter === chosen letter) {
+                document.querySelector('.hide').className = 'show';
+            }
+            //
         */ 
     }
 }
