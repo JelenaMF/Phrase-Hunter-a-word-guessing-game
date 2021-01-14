@@ -47,7 +47,13 @@
                     display losing message
                }
               */ 
+          }
+          checkForWin() {
+               //checks if player revealed all letters in active phrase
+          }
 
+          removeLife(){
+               
           }
      }
 
