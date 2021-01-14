@@ -34,7 +34,20 @@
                this.activePhrase.addPhraseToDisplay();
           }
           handleInteractions() {
-               
+               //clicked/chosen letter is captured
+               /*check for letter matches phrase.char if match {
+                    display letter instead of placeholder
+               }  else {
+                    game must remove a life 
+               } check if all letters in phrase are revealed {
+                    player wins 
+                    display winning message
+               } else if (player live === 0 ) {
+                    player lost
+                    display losing message
+               }
+              */ 
+
           }
      }
 
