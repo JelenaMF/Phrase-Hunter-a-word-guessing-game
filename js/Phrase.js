@@ -24,9 +24,10 @@ class Phrase {
         }
         console.log(phraseUL);
     }
-    checkLetter() {
-        //checks to see if the letters selected by player matches letters in the phrase.
+    //checking for matching letters 
+    checkLetter(letter) {
     }
+    //shows matched letters 
     showMatchedLetters() {
         /*reveals letters on the board that matches a letter in the phrase 
             const letter = document.querySelectorAll('.letter');
