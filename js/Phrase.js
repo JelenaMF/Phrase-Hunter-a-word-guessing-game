@@ -26,7 +26,6 @@ class Phrase {
     }
     //checking for matching letters 
     checkLetter(letter) {
-
         if(game.activePhrase.phrase.includes(letter)) {
             return true;
         } else {
@@ -34,7 +33,14 @@ class Phrase {
         }
     }
     //shows matched letters 
-    showMatchedLetters() {
+    showMatchedLetters(letter) {
+        const letters = document.querySelector('.hide');
+        if (this.checkLetter(letter) === true) {
+            letters.classList.remove('hide');
+            letters.classList.add('show');
+        } else {
+            letters.classList.add(hide);
+        }
         /*reveals letters on the board that matches a letter in the phrase 
             const letter = document.querySelectorAll('.letter');
             /if (letter === chosen letter) {
