@@ -32,18 +32,17 @@ class Phrase {
             return false;
         }
     }
-    //shows matched letters 
-    showMatchedLetters(letter) {
-        const letters = document.querySelector('.hide');
-        if (this.checkLetter(letter) === true) {
-            if(letters.textContent === letter) {
-                letters.classList.remove('hide');
-                letters.classList.add('show');
-            }
+    //shows matching letters 
+    showMatchedLetter(letter) {
+        const letters = document.querySelectorAll('.letter');
+        for(const char of letters) {
            
-        } else {
-            letters.classList.remove('show');
+            if (char.innerText === letter) {
+               char.classList.remove('hide');
+               char.classList.add('show');
+            } 
         }
+        
     }
 }
 
