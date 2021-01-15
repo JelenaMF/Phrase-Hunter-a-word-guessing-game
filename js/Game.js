@@ -57,6 +57,12 @@
               */ 
           }
           checkForWin() {
+               const currentPhrase = this.activePhrase.phrase.length;
+               currentPhrase.array.forEach(element => {
+                   if(currentPhrase.className === 'show') {
+                         
+                   }
+               });
                //checks if player revealed all letters in active phrase
           }
 
