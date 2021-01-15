@@ -15,10 +15,17 @@
           }
           createPhrases() {
                const phrase = [new Phrase('Another one bites the dust'),
-                              new Phrase('Skeletons in the closet'),
-                              new Phrase('Bury your head in the sand'),
-                              new Phrase('Keep your friends close but your enemies closer'),
-                              new Phrase('Show me the money')];
+                              new Phrase('Pull yourself together'),
+                              new Phrase('Speak of the devil'),
+                              new Phrase('Cut to the chase'),
+                              new Phrase('Curiousity killed the cat'),
+                              new Phrase('Close but no cigar'),
+                              new Phrase('I want to rock'),
+                              new Phrase('Show me the money'),
+                              new Phrase('Break a leg'),
+                              new Phrase('Cutting corners'),
+                              new Phrase('Hit the sack')
+                         ];
                return phrase;
           }
           //makes the above createdPhrases populate randomly.
@@ -35,6 +42,7 @@
           }
           handleInteractions() {
                //clicked/chosen letter is captured
+               
                /*check for letter matches phrase.char if match {
                     display letter instead of placeholder
                }  else {

@@ -26,6 +26,12 @@ class Phrase {
     }
     //checking for matching letters 
     checkLetter(letter) {
+        
+        if(letter === game.activePhrase.phrase) {
+            return true;
+        } else {
+            return false;
+        }
     }
     //shows matched letters 
     showMatchedLetters() {
