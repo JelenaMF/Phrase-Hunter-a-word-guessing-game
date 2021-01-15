@@ -39,15 +39,8 @@ class Phrase {
             letters.classList.remove('hide');
             letters.classList.add('show');
         } else {
-            letters.classList.add(hide);
+            letters.classList.remove('show');
         }
-        /*reveals letters on the board that matches a letter in the phrase 
-            const letter = document.querySelectorAll('.letter');
-            /if (letter === chosen letter) {
-                document.querySelector('.hide').className = 'show';
-            }
-            //
-        */ 
     }
 }
 
