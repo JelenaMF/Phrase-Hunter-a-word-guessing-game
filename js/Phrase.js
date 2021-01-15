@@ -36,8 +36,11 @@ class Phrase {
     showMatchedLetters(letter) {
         const letters = document.querySelector('.hide');
         if (this.checkLetter(letter) === true) {
-            letters.classList.remove('hide');
-            letters.classList.add('show');
+            if(letters.textContent === letter) {
+                letters.classList.remove('hide');
+                letters.classList.add('show');
+            }
+           
         } else {
             letters.classList.remove('show');
         }
