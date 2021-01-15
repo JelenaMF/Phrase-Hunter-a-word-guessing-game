@@ -26,8 +26,8 @@ class Phrase {
     }
     //checking for matching letters 
     checkLetter(letter) {
-        
-        if(letter === game.activePhrase.phrase) {
+
+        if(game.activePhrase.phrase.includes(letter)) {
             return true;
         } else {
             return false;
