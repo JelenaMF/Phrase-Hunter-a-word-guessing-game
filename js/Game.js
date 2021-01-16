@@ -56,17 +56,22 @@
                }
               */ 
           }
+          //checks if game has been won returning a boolean
           checkForWin() {
-               const currentPhrase = this.activePhrase.phrase.length;
-               currentPhrase.array.forEach(element => {
-                   if(currentPhrase.className === 'show') {
-                         
-                   }
-               });
-               //checks if player revealed all letters in active phrase
+               const showLetters = document.querySelectorAll('.show').length;
+               const chosenLetter = document.querySelectorAll('.letter').length;
+               return showLetters === chosenLetter;
           }
-
+          /** increases the value of the missed property
+           * removes a heart/life
+           * checks for remaining life
+           */
           removeLife(){
+               const life = document.getElementbyClassName('tries');
+              if(Phrase.checkLetter === false) {
+                   this.missed = 1;
+                   life = `<img src="images/loseHeart.png"`;
+              }
                
           }
      }
