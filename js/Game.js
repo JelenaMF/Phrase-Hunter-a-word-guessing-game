@@ -41,10 +41,16 @@
                this.activePhrase.addPhraseToDisplay();
           }
           handleInteractions() {
+               const key = document.querySelection('.key');
+               key.clicked;
                //clicked/chosen letter is captured
+               if(this.activePhrase.checkLetter(key)) {
+                    key.classList.add('chosen');
+               }
+                         
+                    
                
-               /*check for letter matches phrase.char if match {
-                    display letter instead of placeholder
+               /*check for letter matches 
                }  else {
                     game must remove a life 
                } check if all letters in phrase are revealed {
@@ -67,11 +73,14 @@
            * checks for remaining life
            */
           removeLife(){
-               const life = document.getElementbyClassName('tries');
+               let life = document.querySelectorAll('.tries');
+               for(const lostlife of life) {
+
+               }
               if(Phrase.checkLetter === false) {
                    this.missed = 1;
                    life = `<img src="images/loseHeart.png"`;
-              }
+              }                                                      
                
           }
      }
