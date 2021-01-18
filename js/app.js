@@ -12,3 +12,11 @@ document.querySelector('#btn__reset').addEventListener('click', (e) => {
     game.startGame();
     
 });
+
+const keys = document.querySelectorAll('.key');
+for(const key of keys) {
+    console.log(keys);
+    key.addEventListener('click', (e) => {
+        console.log(`you picked a letter key`)
+    }); 
+}

@@ -88,13 +88,15 @@
                const display = document.getElementById('overlay');
                const gameOver = document.getElementById('game-over-message');
                if(this.checkForWin() === true) {
-                    display.textContent = 'You Win!!';
-                    gameOver.classList.add('win');
+                    gameOver.textContent = 'You Win!!';
+                    display.classList.add('win');
+                    display.style.display = 'block';
                     console.log('winner');        
                } else {
-                    display.textContent = 'Nice Try, try again';
-                    gameOver.classList.remove('win');
-                    gameOver.classList.add('lose');
+                    gameOver.textContent = 'Nice Try, try again';
+                    display.classList.remove('win');
+                    display.classList.add('lose');
+                    display.style.display = 'block';
                     console.log('loser');
                }
 
