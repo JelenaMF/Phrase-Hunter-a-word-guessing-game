@@ -41,12 +41,11 @@
                this.activePhrase.addPhraseToDisplay();
           }
           handleInteractions() {
-               const key = document.querySelection('.key');
-               key.clicked;
+               
+              
+               //console.log(key);
                //clicked/chosen letter is captured
-               if(this.activePhrase.checkLetter(key)) {
-                    key.classList.add('chosen');
-               }
+     
                          
                     
                
@@ -73,15 +72,24 @@
            * checks for remaining life
            */
           removeLife(){
-               let life = document.querySelectorAll('.tries');
-               for(const lostlife of life) {
-
+               this.missed++;
+               const lives = document.querySelector('.tries img[src$="images/liveHeart.png"]');
+               lives.setAttribute('src', "images/lostHeart.png");
+          
+               if(this.missed === 5){
+                    this.gameover(false);
                }
-              if(Phrase.checkLetter === false) {
-                   this.missed = 1;
-                   life = `<img src="images/loseHeart.png"`;
-              }                                                      
-               
+          
+                                                             
+             
+          }
+          //returns true or false depending on if the game was won/lost
+          gameover(gameWon) {
+               const display = document.getElementById('overlay');
+               const gameOver = document.getElementById('game-over-message');
+               console.log(display);
+               console.log(gameOver);
+
           }
      }
 
