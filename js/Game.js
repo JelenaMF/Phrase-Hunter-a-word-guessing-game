@@ -40,28 +40,29 @@
                this.activePhrase = this.getRandomPhrase();
                this.activePhrase.addPhraseToDisplay();
           }
-          handleInteractions() {
+          handleInteractions(button) {
                
+               console.log(button);
+               //clicked/chosen letter is captured and disabled 
+              button.disabled = true;
+               /*check for letter matches */
+                 
+                if(this.activePhrase.checkLetter(keys)) {
+                   // add wrong css class to selected/clicked letter
+                   button.classList.add('wrong');
+                   this.removeLife();
+                   return false;
+                } else {
+                    button.classList.remove('wrong');
+                    this.activePhrase.showMatchedLetter(button);
+                    button.classList.add('chosen');
+                    return true;
+                }
+                   // call removeLife method
+              // } if()
               
-               //console.log(key);
-               //clicked/chosen letter is captured
-     
-                         
-                    
-               
-               /*check for letter matches 
-               }  else {
-                    game must remove a life 
-               } check if all letters in phrase are revealed {
-                    player wins 
-                    display winning message
-               } else if (player live === 0 ) {
-                    player lost
-                    display losing message
-               }
-              */ 
           }
-          //checks if game has been won returning a boolean
+          //checks if game has been won returning a @{boolean}
           checkForWin() {
                const showLetters = document.querySelectorAll('.show').length;
                const chosenLetter = document.querySelectorAll('.letter').length;
