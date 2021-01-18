@@ -87,8 +87,16 @@
           gameover(gameWon) {
                const display = document.getElementById('overlay');
                const gameOver = document.getElementById('game-over-message');
-               console.log(display);
-               console.log(gameOver);
+               if(this.checkForWin() === true) {
+                    display.textContent = 'You Win!!';
+                    gameOver.classList.add('win');
+                    console.log('winner');        
+               } else {
+                    display.textContent = 'Nice Try, try again';
+                    gameOver.classList.remove('win');
+                    gameOver.classList.add('lose');
+                    console.log('loser');
+               }
 
           }
      }
