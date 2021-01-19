@@ -18,12 +18,12 @@ startButton.addEventListener('click', (e) => {
 const keys = document.querySelectorAll('.key');
 for(const key of keys) {
     
-    key.addEventListener('click', (e) => {
+    key.addEventListener('click', () => {
 
         game.handleInteractions(key);
       
     }); 
-    key.addEventListener('keydown', (e) =>{
+    key.addEventListener('keyup', () =>{
         game.handleInteractions(key);
     });
 }
