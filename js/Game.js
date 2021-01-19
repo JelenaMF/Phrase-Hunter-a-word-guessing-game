@@ -98,8 +98,8 @@
                     display.style.display = 'block';
                     console.log('loser');
                }
+               //reloads the game 
                startButton.addEventListener('click',   (e) => {
-               
                     location.reload();
                 });
           }
