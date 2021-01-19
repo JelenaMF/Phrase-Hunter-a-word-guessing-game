@@ -42,25 +42,21 @@
           }
           handleInteractions(button) {
                
-               console.log(button);
                //clicked/chosen letter is captured and disabled 
               button.disabled = true;
                /*check for letter matches */
                  
-                if(this.activePhrase.checkLetter(keys)) {
+                if(!this.activePhrase.checkLetter(button.textContent)) {
                    // add wrong css class to selected/clicked letter
                    button.classList.add('wrong');
                    this.removeLife();
-                   return false;
-                } else {
-                    button.classList.remove('wrong');
-                    this.activePhrase.showMatchedLetter(button);
+                } 
+                    this.activePhrase.showMatchedLetter(button.textContent);
                     button.classList.add('chosen');
-                    return true;
-                }
-                   // call removeLife method
-              // } if()
               
+              if(this.checkForWin()) {
+                   this.gameover(true);
+              }
           }
           //checks if game has been won returning a @{boolean}
           checkForWin() {
@@ -79,10 +75,7 @@
           
                if(this.missed === 5){
                     this.gameover(false);
-               }
-          
-                                                             
-             
+               }                                          
           }
           //returns true or false depending on if the game was won/lost
           gameover(gameWon) {
