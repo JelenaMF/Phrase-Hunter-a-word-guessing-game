@@ -33,20 +33,24 @@
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
                const randomPhrase = this.phrase[phraseIndex];
                return randomPhrase;
-               console.log(randomPhrase)
           }
           startGame() {
                document.getElementById('overlay').style.display = 'none';
                this.activePhrase = this.getRandomPhrase();
                this.activePhrase.addPhraseToDisplay();
           }
+           /*clicked/chosen letter is captured and disabled 
+               checks if selected letter matches a letter in the activePhrase 
+               giving it a classList of wrong/chosen depending on the result
+               checks for win to end game
+           */
+
           handleInteractions(button) {
                
-               //clicked/chosen letter is captured and disabled 
               button.disabled = true;
                /*check for letter matches */
                  
-                if(!this.activePhrase.checkLetter(button.textContent)) {
+                    if(!this.activePhrase.checkLetter(button.textContent)) {
                    // add wrong css class to selected/clicked letter
                    button.classList.add('wrong');
                    this.removeLife();
@@ -58,6 +62,7 @@
                    this.gameover(true);
               }
           }
+
           //checks if game has been won returning a @{boolean}
           checkForWin() {
                const showLetters = document.querySelectorAll('.show').length;
