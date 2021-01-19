@@ -19,7 +19,11 @@ const keys = document.querySelectorAll('.key');
 for(const key of keys) {
     
     key.addEventListener('click', (e) => {
+
         game.handleInteractions(key);
-        
+      
     }); 
+    key.addEventListener('keydown', (e) =>{
+        game.handleInteractions(key);
+    });
 }
