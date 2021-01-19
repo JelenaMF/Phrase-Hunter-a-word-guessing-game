@@ -5,8 +5,9 @@
  * when it ends */
 //add a new instance of the game class 
 const game = new Game();
+const startButton = document.querySelector('#btn__reset');
 //add event listener for the start button and onscreen keyboard buttons 
-document.querySelector('#btn__reset').addEventListener('click', (e) => {
+startButton.addEventListener('click', (e) => {
     game.startGame();
     //when game is completed the gameboard resets by clicking startbutton
         //removes all li elements from the Phrase ul element 

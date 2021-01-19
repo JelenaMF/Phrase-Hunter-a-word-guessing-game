@@ -87,18 +87,21 @@
                const display = document.getElementById('overlay');
                const gameOver = document.getElementById('game-over-message');
                if(this.checkForWin() === true) {
-                    gameOver.textContent = 'You Win!!';
+                    gameOver.innerHTML = 'You Win!!';
                     display.classList.add('win');
                     display.style.display = 'block';
                     console.log('winner');        
                } else {
-                    gameOver.textContent = 'Nice Try, try again';
+                    gameOver.innerHTML = 'Nice Try, try again';
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block';
                     console.log('loser');
                }
-
+               startButton.addEventListener('click',   (e) => {
+               
+                    location.reload();
+                });
           }
      }
 
