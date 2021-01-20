@@ -19,12 +19,15 @@ for(const key of keys) {
         game.handleInteractions(key);
       
     }); 
-    key.addEventListener('keydown', (e) =>{
-        if(key.textContent === e.key.toLowerCase() && key.disabled === false){
+    window.addEventListener('keyup', (e) =>{
+        if(e.key == key.textContent) {
             game.handleInteractions(key);
             console.log(key);
-
+        } if(startButton){
+            game.startGame();
         }
+
+        
       
     });
 }
