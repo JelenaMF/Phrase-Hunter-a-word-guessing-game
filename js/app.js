@@ -23,11 +23,6 @@ for(const key of keys) {
         if(e.key == key.textContent) {
             game.handleInteractions(key);
             console.log(key);
-        } if(startButton){
-            game.startGame();
-        }
-
-        
-      
+        }       
     });
 }
