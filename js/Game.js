@@ -99,7 +99,7 @@
                     console.log('loser');
                }
                //reloads the game 
-               startButton.addEventListener('click',   (e) => {
+               startButton.addEventListener('click', (e) => {
                     location.reload();
                 });
           }
