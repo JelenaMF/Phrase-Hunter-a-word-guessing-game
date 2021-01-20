@@ -9,21 +9,22 @@ const startButton = document.querySelector('#btn__reset');
 //add event listener for the start button and onscreen keyboard buttons 
 startButton.addEventListener('click', (e) => {
     game.startGame();
-    //when game is completed the gameboard resets by clicking startbutton
-        //removes all li elements from the Phrase ul element 
-        //enables all of the onscreen keyboard buttons and update keys class to hide
-        //resets all the heart images in the score board to display all liveHeart. 
+     
 });
 
-const keys = document.querySelectorAll('.key');
+const keys = document.querySelectorAll('.keyrow button');
 for(const key of keys) {
-    
     key.addEventListener('click', () => {
 
         game.handleInteractions(key);
       
     }); 
-    key.addEventListener('keyup', () =>{
-        game.handleInteractions(key);
+    key.addEventListener('keydown', (e) =>{
+        if(key.textContent === e.key.toLowerCase() && key.disabled === false){
+            game.handleInteractions(key);
+            console.log(key);
+
+        }
+      
     });
 }
