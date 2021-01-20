@@ -1,5 +1,15 @@
 # Phrase Hunter- a word guessing game
  Object-Oriented Programming unit 4
+ 
+ ## **Custom Styles and Animation**
+ > **Changed fonts 
+  
+ 
+ 
+ 
+ 
+ 
+ 
 the object of the game is for the player to guess all the letters in a hidden, random phrase. 
 
 At the start of the game, the player will be given the numbers of letters and words in the phrase. These are represented with black boxes on the screen.
@@ -12,4 +22,4 @@ At the start of the game, the player will be given the numbers of letters and wo
 
  if the selected letter isn't in the phrase the player loses a heart.
 
- The player keeps choosing letters until they reveal the phrase or the lost their five lives. 
+ The player keeps choosing letters until they reveal the phrase or they lost their five lives. 
