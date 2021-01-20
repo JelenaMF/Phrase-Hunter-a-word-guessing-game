@@ -90,17 +90,25 @@
                     gameOver.innerHTML = 'You Win!!';
                     display.classList.add('win');
                     display.style.display = 'block';
-                    console.log('winner');        
+                          
                } else {
                     gameOver.innerHTML = 'Nice Try, try again';
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block';
-                    console.log('loser');
+                 
                }
                //reloads the game 
                startButton.addEventListener('click', (e) => {
-                    location.reload();
+                    
+                    this.startGame();
+                    document.querySelector('#phrase ul').innerHTML = '';
+                    this.activePhrase.addPhraseToDisplay();
+                    for(const key of keys) {
+                         key.disabled = false;
+                         key.classList.remove('wrong', 'chosen');
+                    }
+                    this.missed = 0;
                 });
           }
      }
