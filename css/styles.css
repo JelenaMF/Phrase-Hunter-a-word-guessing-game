@@ -88,6 +88,7 @@ button {
 
 .header {
   color: #3a3f58;
+  font-family: 'Lobster', cursive;
 }
 
 
@@ -102,6 +103,8 @@ button {
   color: transparent;
   background: var(--color-neutral-light);
   border-radius: 5px;
+  animation: jackInTheBox 0.82s cubic-bezier(.36,.07,.19,.97), both;
+  
 }
 
 .space {
@@ -112,7 +115,7 @@ button {
 
 .show {
   color: #fff;
-  background-color: 	#6666ff;
+  background-color: #8c64f8;
   font-size: 20px;
   height: 65px;
   width: 65px;
@@ -120,6 +123,7 @@ button {
   margin-right: 2px;
   border-radius: 5px;
   -webkit-animation-duration: .5s;
+  animation: zoomIn 0.82s cubic-bezier(.36,.07,.19,.97), both;
   animation-duration: .5s;
 }
 
@@ -136,12 +140,13 @@ button {
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
+  animation: bounceIn 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
 .wrong {
   background: #f7a964;
   color: #FFFFFF;
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
 .btn__reset {
@@ -179,6 +184,8 @@ button {
 
 .title {
   color: #FFF;
+  font-family: 'Lobster', cursive;
+  animation: rollIn 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
 .start {
