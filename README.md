@@ -33,3 +33,6 @@ One of the challenges I had while creating this program was the reset after the 
 they ```keyup eventlistener``` was also a little challenging at one point I could the interpreter was listening to the tab clicks and the user could click enter or the space bar to select the desired letter but that wasn't the goal.
 
 Adding the animation was by far the most fun. 
+
+## Live Mode 
+[Phrase Hunter- Guessing game](https://raw.githack.com/JelenaMF/Phrase-Hunter-a-word-guessing-game/main/index.html)
