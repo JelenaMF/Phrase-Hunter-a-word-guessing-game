@@ -1,5 +1,6 @@
 # Phrase Hunter- a word guessing game
  Object-Oriented Programming unit 4
+ This program is a game similarly to the game show wheel of fortune (without the wheel) There are a few phrases the user will have to guess the letters within the phrase and guess the phrase before they run out of time.
  
  ## **Custom Styles and Animation**
  > 1. The font for title class and header class was changed to 'Lobster', cursive
@@ -12,12 +13,7 @@
     * shake added to the wrong class
     * rollIn added to the title class 
     
- 
- 
- 
- 
- 
- <Object of the game >
+ ## Object of the game
 the object of the game is for the player to guess all the letters in a hidden, random phrase. 
 
 At the start of the game, the player will be given the numbers of letters and words in the phrase. These are represented with black boxes on the screen.
@@ -31,3 +27,9 @@ At the start of the game, the player will be given the numbers of letters and wo
  if the selected letter isn't in the phrase the player loses a heart.
 
  The player keeps choosing letters until they reveal the phrase or they lost their five lives. 
+## Challenges in building the code 
+One of the challenges I had while creating this program was the reset after the gameover method was run. I thought by using the ```location.reload()``` my goal would be accomplished but it turned out that all it did was refresh the page which caused the user to press play game twice once at the gameover page and then again at the startpage. 
+
+they ```keyup eventlistener``` was also a little challenging at one point I could the interpreter was listening to the tab clicks and the user could click enter or the space bar to select the desired letter but that wasn't the goal.
+
+Adding the animation was by far the most fun. 
