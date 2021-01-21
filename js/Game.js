@@ -98,7 +98,7 @@
                     display.style.display = 'block';
                  
                }
-               //reloads the game 
+               //reloads the game, resets the hearts, and keys
                startButton.addEventListener('click', (e) => {
                     
                     this.startGame();
