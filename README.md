@@ -35,4 +35,4 @@ they ```keyup eventlistener``` was also a little challenging at one point I coul
 Adding the animation was by far the most fun. 
 
 ## Live Mode 
-[Phrase Hunter- Guessing game]() 
+[Phrase Hunter- Guessing game](https://rawcdn.githack.com/JelenaMF/Phrase-Hunter-a-word-guessing-game/081ed23019c7c568121bc7b701c74a545a11a7d1/index.html) 
