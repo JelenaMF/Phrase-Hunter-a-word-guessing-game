@@ -102,6 +102,10 @@
                startButton.addEventListener('click', (e) => {
                     
                     this.startGame();
+                    const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
+                    for(const heart of hearts) {
+                         heart.src = 'images/liveHeart.png';
+                    }
                     document.querySelector('#phrase ul').innerHTML = '';
                     this.activePhrase.addPhraseToDisplay();
                     for(const key of keys) {
@@ -109,6 +113,7 @@
                          key.classList.remove('wrong', 'chosen');
                     }
                     this.missed = 0;
+                   
                 });
           }
      }
