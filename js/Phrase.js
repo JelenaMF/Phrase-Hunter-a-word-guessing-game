@@ -22,7 +22,6 @@ class Phrase {
                 phraseLi.textContent = char;
             }
         }
-        console.log(phraseUL);
     }
     //checking for matching letters 
     checkLetter(letter) {
