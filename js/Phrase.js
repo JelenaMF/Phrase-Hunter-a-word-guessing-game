@@ -25,11 +25,7 @@ class Phrase {
     }
     //checking for matching letters 
     checkLetter(letter) {
-        if(game.activePhrase.phrase.includes(letter)) {
-            return true;
-        } else {
-            return false;
-        }
+        return game.activePhrase.phrase.includes(letter); 
     }
     //shows matching letters 
     showMatchedLetter(letter) {
