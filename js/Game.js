@@ -14,11 +14,11 @@
                this.activePhrase = null;
           }
           createPhrases() {
-               const phrase = [new Phrase('Another one bites the dust'),
+               const phrase = [new Phrase('stop crying wolf'),
                               new Phrase('Pull yourself together'),
                               new Phrase('Speak of the devil'),
                               new Phrase('Cut to the chase'),
-                              new Phrase('Curiousity killed the cat'),
+                              new Phrase('Hold your horses'),
                               new Phrase('Close but no cigar'),
                               new Phrase('I want to rock'),
                               new Phrase('Show me the money'),
@@ -50,8 +50,7 @@
               button.disabled = true;
                /*check for letter matches */
                  
-                    if(!this.activePhrase.checkLetter(button.textContent)) {
-                   // add wrong css class to selected/clicked letter
+               if(!this.activePhrase.checkLetter(button.textContent)) {
                    button.classList.add('wrong');
                    this.removeLife();
                 } 
@@ -59,7 +58,7 @@
                     button.classList.add('chosen');
               
               if(this.checkForWin()) {
-                   this.gameover(true);
+                   this.gameOver(true);
               }
           }
 
@@ -79,24 +78,24 @@
                lives.setAttribute('src', "images/lostHeart.png");
           
                if(this.missed === 5){
-                    this.gameover(false);
+                    this.gameOver(false);
                }                                          
           }
           //returns true or false depending on if the game was won/lost
-          gameover(gameWon) {
+          gameOver(gameWon) {
                const display = document.getElementById('overlay');
-               const gameOver = document.getElementById('game-over-message');
-               if(this.checkForWin() === true) {
-                    gameOver.innerHTML = 'You Win!!';
+               const gameover = document.getElementById('game-over-message');
+               if(this.checkForWin(true)) {
+                    gameover.innerHTML = 'You Win!!';
+                    display.classList.remove('lose');
                     display.classList.add('win');
                     display.style.display = 'block';
                           
                } else {
-                    gameOver.innerHTML = 'Nice Try, try again';
+                    gameover.innerHTML = 'Nice Try, try again';
                     display.classList.remove('win');
                     display.classList.add('lose');
-                    display.style.display = 'block';
-                 
+                    display.style.display = 'block'; 
                }
                //reloads the game, resets the hearts, and keys
                startButton.addEventListener('click', (e) => {
