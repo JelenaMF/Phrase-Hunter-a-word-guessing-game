@@ -15,7 +15,7 @@
           }
           createPhrases() {
                const phrase = [new Phrase('stop crying wolf'),
-                              new Phrase('Pull yourself together'),
+                              new Phrase('Pull it together'),
                               new Phrase('Speak of the devil'),
                               new Phrase('Cut to the chase'),
                               new Phrase('Hold your horses'),
@@ -53,11 +53,10 @@
                if(!this.activePhrase.checkLetter(button.textContent)) {
                    button.classList.add('wrong');
                    this.removeLife();
-                } 
-                    this.activePhrase.showMatchedLetter(button.textContent);
+                } if (this.activePhrase.showMatchedLetter(button.textContent)) {
                     button.classList.add('chosen');
-              
-              if(this.checkForWin()) {
+                }    
+               if(this.checkForWin()) {
                    this.gameOver(true);
               }
           }
