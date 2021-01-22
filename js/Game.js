@@ -45,7 +45,7 @@
                checks for win to end game
            */
 
-          handleInteractions(button) {
+          handleInteraction(button) {
                
               button.disabled = true;
                /*check for letter matches */

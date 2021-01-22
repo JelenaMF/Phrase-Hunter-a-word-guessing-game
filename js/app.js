@@ -3,27 +3,28 @@
  * app.js
  * performs basic DOM selection, add event listeners and resets the game
  * when it ends */
-//add a new instance of the game class 
-const game = new Game();
-const keys = document.querySelectorAll('.key');
 
+let game;
+const keys = document.querySelectorAll('.key');
 const startButton = document.querySelector('#btn__reset');
 //add event listener for the start button and onscreen keyboard buttons 
 startButton.addEventListener('click', (e) => {
+    game = new Game();
     game.startGame();
+
      
 });
 
 for(const key of keys) {
-    key.addEventListener('click', () => {
+    key.addEventListener('click', (e) => {
 
-        game.handleInteractions(key);
+        game.handleInteraction(key);
       
     }); 
     window.addEventListener('keyup', (e) =>{
-        if(e.key == key.textContent) {
-            game.handleInteractions(key);
-            console.log(key);
-        }       
+        if(e.key == key.textContent && !key.disabled) {
+            game.handleInteraction(key);
+        
+        } 
     });
 }
