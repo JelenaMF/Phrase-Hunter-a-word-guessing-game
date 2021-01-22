@@ -3,10 +3,12 @@
  * app.js
  * performs basic DOM selection, add event listeners and resets the game
  * when it ends */
+//add a new instance of the game class 
 const game = new Game();
 const keys = document.querySelectorAll('.key');
+
 const startButton = document.querySelector('#btn__reset');
-//event listener for the start button and onscreen keyboard buttons 
+//add event listener for the start button and onscreen keyboard buttons 
 startButton.addEventListener('click', (e) => {
     game.startGame();
      
