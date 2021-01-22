@@ -6,6 +6,7 @@
 
 let game;
 const keys = document.querySelectorAll('.key');
+
 const startButton = document.querySelector('#btn__reset');
 //add event listener for the start button and onscreen keyboard buttons 
 startButton.addEventListener('click', (e) => {

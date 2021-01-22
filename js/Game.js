@@ -53,10 +53,14 @@
                if(!this.activePhrase.checkLetter(button.textContent)) {
                    button.classList.add('wrong');
                    this.removeLife();
-                } if (this.activePhrase.showMatchedLetter(button.textContent)) {
+                } 
+                 if(this.activePhrase.checkLetter(button.textContent)){
                     button.classList.add('chosen');
-                }    
-               if(this.checkForWin()) {
+                    this.activePhrase.showMatchedLetter(button.textContent);
+                 }  
+                   
+              
+              if(this.checkForWin()) {
                    this.gameOver(true);
               }
           }
