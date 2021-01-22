@@ -22,10 +22,13 @@ for(const key of keys) {
         game.handleInteraction(key);
       
     }); 
-    window.addEventListener('keyup', (e) =>{
+   
+}
+addEventListener('keyup', (e) =>{
+    for(const key of keys) {
         if(e.key == key.textContent && !key.disabled) {
             game.handleInteraction(key);
-        
-        } 
-    });
-}
+        }
+
+    }
+});
