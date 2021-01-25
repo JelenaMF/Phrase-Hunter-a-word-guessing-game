@@ -95,7 +95,7 @@
                     display.style.display = 'block';
                           
                } else {
-                    gameover.innerHTML = 'Nice Try, try again';
+                    gameover.innerHTML = `Nice Try, the phrase was "${this.activePhrase.phrase}"`;
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block'; 
