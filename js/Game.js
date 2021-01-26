@@ -117,6 +117,8 @@
                     this.missed = 0;
                    
                 });
+                display.style.display = "flex";
+
           }
      }
 
