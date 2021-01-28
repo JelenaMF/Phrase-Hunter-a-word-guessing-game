@@ -30,7 +30,7 @@ At the start of the game, the player will be given the numbers of letters and wo
 ## Challenges in building the code 
 One of the challenges I had while creating this program was the reset after the gameover method was run. I thought by using the ```location.reload()``` my goal would be accomplished but it turned out that all it did was refresh the page which caused the user to press play game twice once at the gameover page and then again at the startpage. 
 
-they ```keyup eventlistener``` was also a little challenging at one point I could the interpreter was listening to the tab clicks and the user could click enter or the space bar to select the desired letter but that wasn't the goal.
+they ```keyup eventlistener``` was also a little challenging at one point I could the interpreter was listening to the tab clicks and the user could click enter or the space bar to select the desired letter but that wasn't the goal. Also disabling the keyboard in the gameover page. I later add the over property to the Game property, called it in the gameover method and used it in a conditional of the app.js file. 
 
 Adding the animation was by far the most fun. 
 
