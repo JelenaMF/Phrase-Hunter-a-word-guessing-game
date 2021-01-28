@@ -25,10 +25,14 @@ for(const key of keys) {
    
 }
 addEventListener('keyup', (e) =>{
-    for(const key of keys) {
-        if(e.key == key.textContent && !key.disabled) {
-            game.handleInteraction(key);
+    if(game.over){
+        e.preventDefault();
+    } else {
+        for(const key of keys) {
+            if(e.key == key.textContent && !key.disabled) {
+                game.handleInteraction(key);
+            }
         }
-
     }
+    
 });

@@ -11,6 +11,7 @@
           constructor () {
                this.missed = 0;
                this.phrase = this.createPhrases();
+               this.over = false; //disabling keys during game over 
                this.activePhrase = null;
           }
           createPhrases() {
@@ -86,6 +87,7 @@
           }
           //returns true or false depending on if the game was won/lost
           gameOver(gameWon) {
+               this.over = true;   
                const display = document.getElementById('overlay');
                const gameover = document.getElementById('game-over-message');
                if(this.checkForWin(true)) {
