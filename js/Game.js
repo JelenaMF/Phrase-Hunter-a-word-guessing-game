@@ -15,7 +15,7 @@
                this.activePhrase = null;
           }
           createPhrases() {
-               const phrase = [new Phrase('stop crying wolf'),
+               const phrase = [new Phrase('Look at the flowers'),
                               new Phrase('Pull it together'),
                               new Phrase('Speak of the devil'),
                               new Phrase('Cut to the chase'),
