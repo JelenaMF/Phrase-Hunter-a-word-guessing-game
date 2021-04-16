@@ -1,5 +1,4 @@
-# Phrase Hunter- a word guessing game
- Object-Oriented Programming unit 4
+# Guess the Phrase- a word guessing game
  This program is a game similarly to the game show wheel of fortune (without the wheel) There are a few phrases the user will have to guess the letters within the phrase and guess the phrase before they run out of time.
  
  ## **Custom Styles and Animation**
