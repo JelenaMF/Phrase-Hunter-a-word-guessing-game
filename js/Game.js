@@ -1,5 +1,4 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
+/* 
  * Game.js 
  * manages the function of the game includes methods for:
  * starting/ending game 
@@ -101,17 +100,22 @@
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block'; 
+                    console.log(this.activePhrase);
+
                }
-               //reloads the game, resets the hearts, and keys
+               //reloads the game, resets the hearts, phrase, and keys
                startButton.addEventListener('click', (e) => {
                     
                     this.startGame();
+                    new Game();
+                    //need to remove previous activePhrase and replace with new activePhrase
                     const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
                     for(const heart of hearts) {
                          heart.src = 'images/liveHeart.png';
                     }
                     document.querySelector('#phrase ul').innerHTML = '';
                     this.activePhrase.addPhraseToDisplay();
+                    console.log(this.activePhrase);
                     for(const key of keys) {
                          key.disabled = false;
                          key.classList.remove('wrong', 'chosen');
