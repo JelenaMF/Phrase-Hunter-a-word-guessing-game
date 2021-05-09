@@ -14,7 +14,9 @@
                this.activePhrase = null;
           }
           createPhrases() {
-               const phrase = [new Phrase('Look at the flowers'),
+               //add a hint property to display to user 
+ 
+               const phrase = [new Phrase('Look at the flowers'), //add hint property 
                               new Phrase('Pull it together'),
                               new Phrase('Speak of the devil'),
                               new Phrase('Cut to the chase'),
@@ -28,6 +30,16 @@
                          ];
                return phrase;
           }
+          /*create a showHint method
+          ** showHint() {
+               create hint button and set it variable hintButton
+               call eventHandler on hintButton 
+                    show Phrase[1]
+          }
+          */
+
+
+
           //makes the above createdPhrases populate randomly.
           getRandomPhrase() {
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
@@ -94,32 +106,34 @@
                     display.classList.remove('lose');
                     display.classList.add('win');
                     display.style.display = 'block';
-                          
+                    console.log(this.activePhrase.phrase);
+
                } else {
                     gameover.innerHTML = `Nice Try, the phrase was "${this.activePhrase.phrase}"`;
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block'; 
-                    console.log(this.activePhrase);
+                    console.log(this.activePhrase.phrase);
 
                }
                //reloads the game, resets the hearts, phrase, and keys
                startButton.addEventListener('click', (e) => {
                     
                     this.startGame();
-                    new Game();
-                    //need to remove previous activePhrase and replace with new activePhrase
+                    //new Game();
                     const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
                     for(const heart of hearts) {
                          heart.src = 'images/liveHeart.png';
                     }
+                    //removes old phrase? 
                     document.querySelector('#phrase ul').innerHTML = '';
+                    //replace with new activePhrase?
                     this.activePhrase.addPhraseToDisplay();
-                    console.log(this.activePhrase);
+                    console.log(this.activePhrase.phrase);
                     for(const key of keys) {
                          key.disabled = false;
                          key.classList.remove('wrong', 'chosen');
-                    }
+                    }    
                     this.missed = 0;
                    
                 });

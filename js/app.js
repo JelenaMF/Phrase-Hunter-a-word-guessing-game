@@ -13,7 +13,7 @@ startButton.addEventListener('click', (e) => {
     game = new Game();
     game.startGame();
 
-     
+    
 });
 
 for(const key of keys) {
