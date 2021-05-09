@@ -12,8 +12,6 @@ const startButton = document.querySelector('#btn__reset');
 startButton.addEventListener('click', (e) => {
     game = new Game();
     game.startGame();
-
-    
 });
 
 for(const key of keys) {

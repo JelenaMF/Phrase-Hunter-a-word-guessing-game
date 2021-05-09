@@ -15,7 +15,7 @@
           }
           createPhrases() {
                //add a hint property to display to user 
- 
+     //change phrase object to include phrase and hint 
                const phrase = [new Phrase('Look at the flowers'), //add hint property 
                               new Phrase('Pull it together'),
                               new Phrase('Speak of the devil'),
@@ -30,11 +30,13 @@
                          ];
                return phrase;
           }
+
           /*create a showHint method
           ** showHint() {
-               create hint button and set it variable hintButton
+               create hint button and set it to variable hintButton
+               phrase.hint
                call eventHandler on hintButton 
-                    show Phrase[1]
+                    show hint
           }
           */
 
