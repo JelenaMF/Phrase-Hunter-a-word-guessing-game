@@ -109,8 +109,13 @@
                     display.classList.add('lose');
                     display.style.display = 'block'; 
                     console.log(this.activePhrase.phrase);
-
                }
+               this.reset(Game);
+                display.style.display = "flex";
+
+          }
+
+          reset(game) {
                //reloads the game, resets the hearts, phrase, and keys
                startButton.addEventListener('click', (e) => {
                     const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
@@ -128,8 +133,6 @@
                     this.missed = 0;
                    
                 });
-                display.style.display = "flex";
-
           }
      }
 
