@@ -15,8 +15,7 @@
           }
           createPhrases() {
                //add a hint property to display to user 
-     //change phrase object to include phrase and hint 
-               const phrase = [new Phrase('Look at the flowers'), //add hint property 
+               const phrase = [new Phrase('Look at the flowers'),
                               new Phrase('Pull it together'),
                               new Phrase('Speak of the devil'),
                               new Phrase('Cut to the chase'),
@@ -30,15 +29,7 @@
                          ];
                return phrase;
           }
-
-          /*create a showHint method
-          ** showHint() {
-               create hint button and set it to variable hintButton
-               phrase.hint
-               call eventHandler on hintButton 
-                    show hint
-          }
-          */
+          //create a showHint method
 
 
 
@@ -52,6 +43,10 @@
                document.getElementById('overlay').style.display = 'none';
                this.activePhrase = this.getRandomPhrase();
                this.activePhrase.addPhraseToDisplay();
+               document.getElementById('timer').style.display = '';
+
+               startTimer();
+               console.log(this.activePhrase);
           }
            /*clicked/chosen letter is captured and disabled 
                checks if selected letter matches a letter in the activePhrase 
@@ -68,11 +63,10 @@
                    button.classList.add('wrong');
                    this.removeLife();
                 } 
-                 if(this.activePhrase.checkLetter(button.textContent)){
+               if(this.activePhrase.checkLetter(button.textContent)){
                     button.classList.add('chosen');
                     this.activePhrase.showMatchedLetter(button.textContent);
                  }  
-                   
               
               if(this.checkForWin()) {
                    this.gameOver(true);
@@ -120,18 +114,14 @@
                }
                //reloads the game, resets the hearts, phrase, and keys
                startButton.addEventListener('click', (e) => {
-                    
-                    this.startGame();
-                    //new Game();
                     const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
                     for(const heart of hearts) {
                          heart.src = 'images/liveHeart.png';
                     }
                     //removes old phrase? 
                     document.querySelector('#phrase ul').innerHTML = '';
-                    //replace with new activePhrase?
                     this.activePhrase.addPhraseToDisplay();
-                    console.log(this.activePhrase.phrase);
+                    console.log(this.activePhrase);
                     for(const key of keys) {
                          key.disabled = false;
                          key.classList.remove('wrong', 'chosen');
