@@ -45,7 +45,7 @@
                this.activePhrase.addPhraseToDisplay();
                document.getElementById('timer').style.display = '';
                startTimer(); 
-               console.log(this.activePhrase);
+               this.reset();
           }
            /*clicked/chosen letter is captured and disabled 
                checks if selected letter matches a letter in the activePhrase 
@@ -54,7 +54,7 @@
            */
 
           handleInteraction(button) {
-               
+     
               button.disabled = true;
                /*check for letter matches */
                  
@@ -110,29 +110,25 @@
                     display.style.display = 'block'; 
                     console.log(this.activePhrase.phrase);
                }
-               this.reset(Game);
                 display.style.display = "flex";
 
           }
 
           reset(game) {
                //reloads the game, resets the hearts, phrase, and keys
-               startButton.addEventListener('click', (e) => {
                     const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
                     for(const heart of hearts) {
                          heart.src = 'images/liveHeart.png';
                     }
                     //removes old phrase? 
-                    document.querySelector('#phrase ul').innerHTML = '';
-                    this.activePhrase.addPhraseToDisplay();
-                    console.log(this.activePhrase);
+                   document.querySelector('#phrase ul').innerHTML = '';
+                   this.activePhrase.addPhraseToDisplay();
                     for(const key of keys) {
                          key.disabled = false;
                          key.classList.remove('wrong', 'chosen');
                     }    
                     this.missed = 0;
                    
-                });
           }
      }
 
