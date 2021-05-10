@@ -44,8 +44,7 @@
                this.activePhrase = this.getRandomPhrase();
                this.activePhrase.addPhraseToDisplay();
                document.getElementById('timer').style.display = '';
-
-               startTimer();
+               startTimer(); 
                console.log(this.activePhrase);
           }
            /*clicked/chosen letter is captured and disabled 
