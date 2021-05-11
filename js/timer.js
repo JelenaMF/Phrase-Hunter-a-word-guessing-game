@@ -1,4 +1,3 @@
-// Credit: Mateusz Rybczonec
 
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
@@ -42,9 +41,7 @@ document.getElementById("timer").innerHTML = `
       ></path>
     </g>
   </svg>
-  <span id="base-timer-label" class="base-timer__label">${formatTime(
-    timeLeft
-  )}</span>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(timeLeft)}</span>
 </div>
 `;
 
@@ -54,11 +51,11 @@ function onTimesUp() {
   game.gameOver();
   if(timeLeft >= 0){
       document.getElementById('timer').style.display = 'none';
-  }
+  } 
 }
 
 function startTimer() {
-  timerInterval = setInterval(() => {
+  timerInterval = setInterval(() => { 
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = formatTime(
@@ -69,9 +66,11 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
+      clearInterval(timerInterval);
     }
   }, 1000);
 }
+
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);

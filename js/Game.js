@@ -101,14 +101,12 @@
                     display.classList.remove('lose');
                     display.classList.add('win');
                     display.style.display = 'block';
-                    console.log(this.activePhrase.phrase);
 
                } else {
                     gameover.innerHTML = `Nice Try, the phrase was "${this.activePhrase.phrase}"`;
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block'; 
-                    console.log(this.activePhrase.phrase);
                }
                 display.style.display = "flex";
 
@@ -128,7 +126,6 @@
                          key.classList.remove('wrong', 'chosen');
                     }    
                     this.missed = 0;
-                   
           }
      }
 
