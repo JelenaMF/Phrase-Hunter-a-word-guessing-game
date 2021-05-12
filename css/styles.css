@@ -29,6 +29,7 @@ body {
   display: flex;
   height: 100vh;
 }
+
 .base-timer {
   position: relative;
   width: 50px;
