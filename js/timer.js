@@ -17,7 +17,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 3;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -49,8 +49,8 @@ document.getElementById("timer").innerHTML = `
 function onTimesUp() {
   clearInterval(timerInterval);
   game.gameOver();
-  if(timeLeft >= 0){
-      document.getElementById('timer').style.display = 'none';
+  if(timeLeft === 0){
+    document.getElementById('timer').style.display = 'none';
   } 
 }
 
@@ -66,8 +66,8 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
-      clearInterval(timerInterval);
     }
+  
   }, 1000);
 }
 
@@ -82,6 +82,8 @@ function formatTime(time) {
 
   return `${minutes}:${seconds}`;
 }
+
+
 
 function setRemainingPathColor(timeLeft) {
   const { alert, warning, info } = COLOR_CODES;

@@ -30,6 +30,11 @@ body {
   height: 100vh;
 }
 
+#timer {
+  display: flex;
+  justify-content: center;
+  }
+
 .base-timer {
   position: relative;
   width: 50px;

@@ -126,7 +126,6 @@
                          key.classList.remove('wrong', 'chosen');
                     }    
                     this.missed = 0;
-                   
-          }
+               }
      }
 
