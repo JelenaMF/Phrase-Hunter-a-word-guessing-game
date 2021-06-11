@@ -17,7 +17,7 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 3;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -51,6 +51,7 @@ function onTimesUp() {
   game.gameOver();
   if(timeLeft === 0){
     document.getElementById('timer').style.display = 'none';
+    timePassed = 0;
   } 
 }
 
