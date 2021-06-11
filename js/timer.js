@@ -51,7 +51,7 @@ function onTimesUp() {
   game.gameOver();
   if(timeLeft === 0){
     document.getElementById('timer').style.display = 'none';
-    timePassed = 0;
+    timePassed = -1;
   } 
 }
 
@@ -67,11 +67,18 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
-    }
+    } 
   
   }, 1000);
 }
 
+function stopTimer(){
+    clearInterval(timerInterval);
+}
+
+function resetTimer(){
+  formatTime(timeLeft);
+}
 
 function formatTime(time) {
   const minutes = Math.floor(time / 60);

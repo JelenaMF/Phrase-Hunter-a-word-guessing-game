@@ -69,6 +69,7 @@
               
               if(this.checkForWin()) {
                    this.gameOver(true);
+                   timePassed = 0;
               }
           }
 
@@ -107,9 +108,12 @@
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block'; 
-               }
-                display.style.display = "flex";
 
+               }
+               display.style.display = "flex";
+               document.getElementById('timer').style.display = 'none';
+               timePassed = -1;
+               stopTimer();
           }
 
           reset(game) {
@@ -118,7 +122,7 @@
                     for(const heart of hearts) {
                          heart.src = 'images/liveHeart.png';
                     }
-                    //removes old phrase? 
+                    //removes previously used phrase
                    document.querySelector('#phrase ul').innerHTML = '';
                    this.activePhrase.addPhraseToDisplay();
                     for(const key of keys) {
@@ -126,6 +130,7 @@
                          key.classList.remove('wrong', 'chosen');
                     }    
                     this.missed = 0;
+                    resetTimer();
                }
      }
 

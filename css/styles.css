@@ -31,7 +31,8 @@ body {
 }
 
 #timer {
-  display: flex;
+  display: block;
+  margin-left: 350px;
   justify-content: center;
   }
 

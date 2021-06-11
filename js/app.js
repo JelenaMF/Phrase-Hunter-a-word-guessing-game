@@ -1,6 +1,4 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * app.js
+/* 
  * performs basic DOM selection, add event listeners and resets the game
  * when it ends */
 
