@@ -16,17 +16,17 @@
 
           createPhrases(phrases, hint) {
                //add a hint property to display to user 
-               const phrase = [new Phrase('Look at the flowers', 'carol'),
-                              new Phrase('Pull it together', 'losing mind'),
-                              new Phrase('Speak of the devil', 'talking about someone'),
-                              new Phrase('Cut to the chase', 'speak faster'),
-                              new Phrase('Hold your horses', 'be patient'),
-                              new Phrase('Close but no cigar', 'almost got it'),
-                              new Phrase('I want to rock', 'party'),
-                              new Phrase('Show me the money', 'pay me'),
-                              new Phrase('Break a leg', 'good luck'),
-                              new Phrase('Cutting corners', 'cheating'),
-                              new Phrase('Hit the sack', 'going to bed')
+               const phrase = [new Phrase('Look at the flowers', 'from the TV series: The Walking Dead. Said by Carol to a little girl.'),
+                              new Phrase('Pull it together', 'used when someone is losing their mind'),
+                              new Phrase('Speak of the devil', 'used when someone shows up after being talked about'),
+                              new Phrase('Cut to the chase', 'used when a story is taking too long to be told.'),
+                              new Phrase('Hold your horses', ' another saying for "be patient"'),
+                              new Phrase('Close but no cigar', 'is used when a goal is not met.'),
+                              new Phrase('I want to rock', 'used when someone wants to party... an 80s phrase'),
+                              new Phrase('Show me the money', 'used when someone should pay you'),
+                              new Phrase('Break a leg', ' a term for good luck but it could be a threat depending on who says it.'),
+                              new Phrase('Cutting corners', 'a phrase used when someone is cheating or using a short cut'),
+                              new Phrase('Hit the sack', 'a phrase used for used for going to bed')
                          ];
                console.log(phrase);
                return phrase;
