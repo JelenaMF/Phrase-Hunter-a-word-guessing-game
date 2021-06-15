@@ -28,7 +28,6 @@
                               new Phrase('Cutting corners', 'a phrase used when someone is cheating or using a short cut'),
                               new Phrase('Hit the sack', 'a phrase used for used for going to bed')
                          ];
-               console.log(phrase);
                return phrase;
           }
 
@@ -37,13 +36,6 @@
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
                const randomPhrase = this.phrase[phraseIndex];
                return randomPhrase;
-          }
-
-          //create a showHint method that displays the hint 
-          addHint(){
-               const phrases = this.phrase;
-               console.log(phrases.hint)
-                return phrases.hint;    
           }
 
           startGame() {
@@ -143,7 +135,6 @@
                     }    
                     this.missed = 0;
                     resetTimer();
-                    setRemainingPathColor(timeLeft);
                }
      }
 

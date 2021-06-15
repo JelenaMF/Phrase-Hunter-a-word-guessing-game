@@ -7,8 +7,8 @@
       }
 
     .title{
-        margin-bottom: 40%;
-        margin-right: 15%;
+        margin-bottom: 25%;
+        margin-right: 25%;
         font-size: 45px;
         position: relative;
     }
@@ -22,5 +22,17 @@
         text-align: center;
         background-color: #1db8b8;
     }
+
+    h2 {
+        padding: 50px;
+        margin-bottom: 50%;
+        text-transform: uppercase;
+        font-size: 50px;
+        margin: 0;
+      }
+      
+      h1 {
+        font-size: 25px;
+      }
 
   }
