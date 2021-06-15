@@ -36,8 +36,8 @@ body {
 
 .base-timer {
   position: sticky;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 
 .base-timer__svg {
@@ -78,13 +78,13 @@ body {
 
 .base-timer__label {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 #hint {
@@ -93,7 +93,7 @@ body {
 }
 
 #scoreboard {
-  margin-bottom: 25%;
+  margin-bottom: 25%
 }
 
 li, ol, ul {
@@ -102,15 +102,16 @@ li, ol, ul {
 }
 
 .title{
-  margin-top: 0%;
+  position: fixed;
+  margin-bottom: 40%;
+  margin-right: 25%;
+  margin-left: 25%;
   font-size: 60px;
 }
 
 h2 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 60px;
-  margin-top: 25%;
 }
 
 h1 {
@@ -136,6 +137,7 @@ button {
   font-size: 25px;
   font-weight: 300;
 	margin: 0 auto;
+  margin-bottom: 50%;
 }
 
 .main-container {
@@ -162,13 +164,14 @@ button {
 .header {
   color: #3a3f58;
   margin: 0;
+  margin-top: 10%;
   text-transform: uppercase;
   font-size: 60px;
   font-family: 'Lobster', cursive;
 }
 
 div#banner.section {
-  margin-top: 25%;
+  margin-top: 15%;
 }
 
 #phase.section {
@@ -194,8 +197,6 @@ div#banner.section {
   width: 20px;
 }
 
-
-
 .show {
   color: #fff;
   background-color: #8c64f8;
@@ -218,8 +219,6 @@ div#banner.section {
   justify-content: center;  
   height: 65px;
   width: 65px;
-  margin-left: 50%;
-
 }
 
 .chosen {
@@ -249,6 +248,7 @@ div#banner.section {
 
 #hints {
   padding: 16px;
+  margin-right: 25%;
 }
 
 #hint-bttn {
@@ -264,6 +264,9 @@ div#banner.section {
   border-right: solid 3px rgba(0, 0, 0, 0);
 }
 
+#scoreboard {
+  margin-bottom: 30%; 
+}
 
 /* Overlay */
 
