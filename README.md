@@ -12,6 +12,7 @@
     * shake added to the wrong class
     * rollIn added to the title class 
     * added a timer that counts down from 60 seconds to making guessing the phrase more intense.
+    * added hint button and hints to the phrases
     
  ## Object of the game
 the object of the game is for the player to guess all the letters in a hidden, random phrase. 

@@ -13,6 +13,15 @@ startButton.addEventListener('click', (e) => {
     game.startGame();
 });
 
+const hintBttn = document.getElementById('hint-bttn');
+hintBttn.addEventListener('click', (e) => {
+   const hint = document.getElementById('hint');
+   hint.innerText= `This hint is: ${game.activePhrase.hint}`;
+   hintBttn.style.display = 'none';
+   hint.style.display = 'block';
+
+})
+
 for(const key of keys) {
     key.addEventListener('click', (e) => {
         game.handleInteraction(key);

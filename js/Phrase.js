@@ -3,9 +3,11 @@
  * manages individual phrases */
 
 class Phrase {
-    constructor(phrase) {
+    constructor(phrase, hint) {
         this.phrase = phrase.toLowerCase();
+        this.hint = hint;
     }
+
     //method displays phrase 
     addPhraseToDisplay() {
         const phraseUL = document.querySelector('#phrase ul'); 
@@ -20,8 +22,9 @@ class Phrase {
                 phraseLi.classList.add(char);
                 phraseLi.textContent = char;
             }
-        }
+        } 
     }
+  
     //checking for matching letters 
     checkLetter(letter) {
         return this.phrase.includes(letter); 
@@ -39,4 +42,3 @@ class Phrase {
         
     }
 }
-

@@ -26,17 +26,16 @@
 body {
   justify-content: space-evenly;
   flex-direction: column;
-  display: flex;
   height: 100vh;
 }
 
 #timer {
   display: block;
-  margin-left: 750px;
+  margin-left: 50%;
   }
 
 .base-timer {
-  position: relative;
+  position: sticky;
   width: 50px;
   height: 50px;
 }
@@ -88,6 +87,15 @@ body {
   font-size: 20px;
 }
 
+#hint {
+  font-size: 25px;
+  font-weight: 300;
+}
+
+#scoreboard {
+  margin-bottom: 25%
+}
+
 li, ol, ul {
   padding: 0;
   display: inline-block;
@@ -128,7 +136,7 @@ button {
   flex-direction: column;
   justify-content: space-around;
   height: 100%;
-  max-height: 900px;
+  max-height: 100vh;
   text-align: center;
   background-color: #1db8b8;
 }
@@ -140,6 +148,7 @@ button {
 
 #phrase ul li{
   margin-top: 15px;
+  position: relative;
 }
 
 /* Title */
@@ -149,6 +158,13 @@ button {
   font-family: 'Lobster', cursive;
 }
 
+div#banner.section {
+  margin-top: 15%;
+}
+
+#phase.section {
+  margin-bottom: 15%;
+}
 
 /* Phrase */
 
@@ -166,7 +182,7 @@ button {
 }
 
 .space {
-  width: 15px;
+  width: 20px;
 }
 
 
@@ -270,3 +286,4 @@ button {
 .lose a {
   color: var(--color-lose);
 }
+

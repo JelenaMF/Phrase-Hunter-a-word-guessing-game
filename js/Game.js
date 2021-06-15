@@ -13,25 +13,24 @@
                this.over = false; //disabling keys during game over 
                this.activePhrase = null;
           }
-          createPhrases() {
+
+          createPhrases(phrases, hint) {
                //add a hint property to display to user 
-               const phrase = [new Phrase('Look at the flowers'),
-                              new Phrase('Pull it together'),
-                              new Phrase('Speak of the devil'),
-                              new Phrase('Cut to the chase'),
-                              new Phrase('Hold your horses'),
-                              new Phrase('Close but no cigar'),
-                              new Phrase('I want to rock'),
-                              new Phrase('Show me the money'),
-                              new Phrase('Break a leg'),
-                              new Phrase('Cutting corners'),
-                              new Phrase('Hit the sack')
+               const phrase = [new Phrase('Look at the flowers', 'carol'),
+                              new Phrase('Pull it together', 'losing mind'),
+                              new Phrase('Speak of the devil', 'talking about someone'),
+                              new Phrase('Cut to the chase', 'speak faster'),
+                              new Phrase('Hold your horses', 'be patient'),
+                              new Phrase('Close but no cigar', 'almost got it'),
+                              new Phrase('I want to rock', 'party'),
+                              new Phrase('Show me the money', 'pay me'),
+                              new Phrase('Break a leg', 'good luck'),
+                              new Phrase('Cutting corners', 'cheating'),
+                              new Phrase('Hit the sack', 'going to bed')
                          ];
+               console.log(phrase);
                return phrase;
           }
-          //create a showHint method
-
-
 
           //makes the above createdPhrases populate randomly.
           getRandomPhrase() {
@@ -39,6 +38,14 @@
                const randomPhrase = this.phrase[phraseIndex];
                return randomPhrase;
           }
+
+          //create a showHint method that displays the hint 
+          addHint(){
+               const phrases = this.phrase;
+               console.log(phrases.hint)
+                return phrases.hint;    
+          }
+
           startGame() {
                document.getElementById('overlay').style.display = 'none';
                this.activePhrase = this.getRandomPhrase();
@@ -46,6 +53,7 @@
                document.getElementById('timer').style.display = '';
                startTimer(); 
                this.reset();
+
           }
            /*clicked/chosen letter is captured and disabled 
                checks if selected letter matches a letter in the activePhrase 
@@ -70,7 +78,7 @@
               if(this.checkForWin()) {
                    this.gameOver(true);
                    timePassed = 0;
-              }
+              } 
           }
 
           //checks if game has been won returning a @{boolean}
@@ -97,6 +105,8 @@
                this.over = true;   
                const display = document.getElementById('overlay');
                const gameover = document.getElementById('game-over-message');
+               const gamePhrase = document.getElementById('phrase');
+               gamePhrase.style.display = 'none';
                if(this.checkForWin(true)) {
                     gameover.innerHTML = 'You Win!!';
                     display.classList.remove('lose');
@@ -119,6 +129,8 @@
           reset(game) {
                //reloads the game, resets the hearts, phrase, and keys
                     const hearts =document.querySelectorAll('.tries img[src$="images/lostHeart.png"]');
+                    const gamePhrase = document.getElementById('phrase');
+                    gamePhrase.style.display = 'block';
                     for(const heart of hearts) {
                          heart.src = 'images/liveHeart.png';
                     }
@@ -131,6 +143,7 @@
                     }    
                     this.missed = 0;
                     resetTimer();
+                    setRemainingPathColor(timeLeft);
                }
      }
 
