@@ -93,7 +93,8 @@ body {
 }
 
 #scoreboard {
-  margin-bottom: 25%
+  margin-bottom: 25%;
+  margin-right: 35%;
 }
 
 li, ol, ul {
@@ -249,6 +250,7 @@ div#banner.section {
 
 #hints {
   padding: 16px;
+  margin-left: 50%;
 }
 
 #hint-bttn {

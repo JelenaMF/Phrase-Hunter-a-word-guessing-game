@@ -22,9 +22,6 @@ let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
-const { alert, warning, info } = COLOR_CODES;
-const timerPath = document.getElementById("base-timer-path-remaining");
-
 
 document.getElementById("timer").innerHTML = `
 <div class="base-timer">
@@ -54,7 +51,6 @@ function onTimesUp() {
   game.gameOver();
   if(timeLeft === 0){
     document.getElementById('timer').style.display = 'none';
-
     timePassed = -1;
   } 
 }
@@ -81,11 +77,12 @@ function stopTimer(){
 }
 
 function resetTimer(){
+  const { alert, warning, info } = COLOR_CODES;
   formatTime(timeLeft);
-  timerPath.classList.remove(alert.color);
-  timerPath.classList.remove(warning.color);
-  timerPath.classList.add(info.color);
-
+  if(timeLeft === TIME_LIMIT){
+    timerPath.classList.remove(alert.color);
+    timerPath.classList.add(info.color);
+  }
 }
 
 function formatTime(time) {
@@ -99,8 +96,10 @@ function formatTime(time) {
   return `${minutes}:${seconds}`;
 }
 
+const timerPath = document.getElementById("base-timer-path-remaining");
 
 function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
     timerPath.classList.remove(warning.color);
     timerPath.classList.add(alert.color);
@@ -119,5 +118,6 @@ function setCircleDasharray() {
   const circleDasharray = `${(
     calculateTimeFraction() * FULL_DASH_ARRAY
   ).toFixed(0)} 283`;
+  
     timerPath.setAttribute("stroke-dasharray", circleDasharray);
 }
