@@ -17,11 +17,13 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 15;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+const { alert, warning, info } = COLOR_CODES;
+
 
 document.getElementById("timer").innerHTML = `
 <div class="base-timer">
@@ -51,6 +53,7 @@ function onTimesUp() {
   game.gameOver();
   if(timeLeft === 0){
     document.getElementById('timer').style.display = 'none';
+
     timePassed = -1;
   } 
 }
@@ -78,6 +81,10 @@ function stopTimer(){
 
 function resetTimer(){
   formatTime(timeLeft);
+  timerPath.classList.remove(alert.color);
+  timerPath.classList.remove(warning.color);
+  timerPath.classList.add(info.color);
+
 }
 
 function formatTime(time) {
@@ -91,24 +98,15 @@ function formatTime(time) {
   return `${minutes}:${seconds}`;
 }
 
-
+const timerPath = document.getElementById("base-timer-path-remaining");
 
 function setRemainingPathColor(timeLeft) {
-  const { alert, warning, info } = COLOR_CODES;
   if (timeLeft <= alert.threshold) {
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(warning.color);
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(alert.color);
+    timerPath.classList.remove(warning.color);
+    timerPath.classList.add(alert.color);
   } else if (timeLeft <= warning.threshold) {
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.remove(info.color);
-    document
-      .getElementById("base-timer-path-remaining")
-      .classList.add(warning.color);
+    timerPath.classList.remove(info.color);
+    timerPath.classList.add(warning.color);
   }
 }
 
@@ -121,7 +119,5 @@ function setCircleDasharray() {
   const circleDasharray = `${(
     calculateTimeFraction() * FULL_DASH_ARRAY
   ).toFixed(0)} 283`;
-  document
-    .getElementById("base-timer-path-remaining")
-    .setAttribute("stroke-dasharray", circleDasharray);
+    timerPath.setAttribute("stroke-dasharray", circleDasharray);
 }
