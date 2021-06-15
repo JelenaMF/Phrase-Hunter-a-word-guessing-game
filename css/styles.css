@@ -101,11 +101,15 @@ li, ol, ul {
   display: inline-block;
 }
 
+.title{
+  margin-top: 0%;
+}
+
 h2 {
   margin: 0;
   text-transform: uppercase;
-  font-size: 10em;
-  margin: 0;
+  font-size: 60px;
+  margin-top: 25%;
 }
 
 h1 {
