@@ -79,10 +79,11 @@ function stopTimer(){
 function resetTimer(){
   const { alert, warning, info } = COLOR_CODES;
   formatTime(timeLeft);
-  if(timeLeft === TIME_LIMIT){
+  
     timerPath.classList.remove(alert.color);
+    timerPath.classList.remove(warning.color);
     timerPath.classList.add(info.color);
-  }
+  
 }
 
 function formatTime(time) {
