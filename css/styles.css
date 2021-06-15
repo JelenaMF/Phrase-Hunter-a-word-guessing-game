@@ -164,12 +164,11 @@ button {
   margin: 0;
   text-transform: uppercase;
   font-size: 60px;
-  margin-top: 15%;
   font-family: 'Lobster', cursive;
 }
 
 div#banner.section {
-  margin-top: 50%;
+  margin-top: 65%;
 }
 
 #phase.section {
