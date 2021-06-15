@@ -17,12 +17,13 @@ const COLOR_CODES = {
   }
 };
 
-const TIME_LIMIT = 15;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 const { alert, warning, info } = COLOR_CODES;
+const timerPath = document.getElementById("base-timer-path-remaining");
 
 
 document.getElementById("timer").innerHTML = `
@@ -98,7 +99,6 @@ function formatTime(time) {
   return `${minutes}:${seconds}`;
 }
 
-const timerPath = document.getElementById("base-timer-path-remaining");
 
 function setRemainingPathColor(timeLeft) {
   if (timeLeft <= alert.threshold) {
