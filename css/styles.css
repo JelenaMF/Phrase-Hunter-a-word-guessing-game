@@ -103,6 +103,7 @@ li, ol, ul {
 
 .title{
   margin-top: 0%;
+  font-size: 60px;
 }
 
 h2 {
@@ -160,6 +161,10 @@ button {
 
 .header {
   color: #3a3f58;
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin-top: 5%;
   font-family: 'Lobster', cursive;
 }
 
