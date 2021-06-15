@@ -235,6 +235,10 @@ div#banner.section {
   border-right: solid 3px rgba(0, 0, 0, .3)
 }
 
+#hint-bttn {
+  margin-left: 50%;
+}
+
 .btn__reset:active {
   padding: 14px 16px 16px 14px;
   border-bottom: solid 4px rgba(0, 0, 0, 0);
