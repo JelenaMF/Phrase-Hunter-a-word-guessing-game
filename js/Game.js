@@ -25,8 +25,8 @@
                               new Phrase('I want to rock', 'used when someone wants to party... an 80s phrase'),
                               new Phrase('Show me the money', 'used when someone should pay you'),
                               new Phrase('Break a leg', ' a term for good luck but it could be a threat depending on who says it.'),
-                              new Phrase('Cutting corners', 'a phrase used when someone is cheating or using a short cut'),
-                              new Phrase('Hit the sack', 'a phrase used for used for going to bed')
+                              new Phrase('Cutting corners', 'used when someone is cheating or using a short cut'),
+                              new Phrase('Hit the sack', 'used for used for going to bed')
                          ];
                return phrase;
           }

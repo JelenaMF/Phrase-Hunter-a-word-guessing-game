@@ -1,6 +1,5 @@
 /* Main styles */
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Pangolin&family=Raleway&family=Roboto&display=swap');
 
 /* Variables */
 
@@ -21,13 +20,14 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
   justify-content: space-evenly;
   flex-direction: column;
   height: 100vh;
+  
 }
 
 #timer {
@@ -91,6 +91,9 @@ body {
 #hint {
   font-size: 25px;
   font-weight: 300;
+  font-family: 'Pangolin', cursive;
+  margin-left: 30%;
+
 }
 
 #scoreboard {
@@ -102,22 +105,7 @@ li, ol, ul {
   display: inline-block;
 }
 
-.title{
-  position: fixed;
-  margin-bottom: 30%;
-  margin-right: 25%;
-  margin-left: 25%;
-  font-size: 60px;
-}
 
-h2 {
-  margin: 0;
-  text-transform: uppercase;
-}
-
-h1 {
-  font-size: 30px;
-}
 
 button {
   margin: 6px;
@@ -164,13 +152,26 @@ button {
 
 /* Title */
 
+.title{
+  position: fixed;
+  margin-bottom: 30%;
+  margin-right: 25%;
+  margin-left: 25%;
+  font-size: 60px;
+}
+
+h2 {
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
 .header {
   color: #3a3f58;
   margin: 0;
   margin-top: 10%;
   text-transform: uppercase;
   font-size: 60px;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Pangolin', cursive;
 }
 
 div#banner.section {
@@ -275,6 +276,12 @@ div#banner.section {
   margin-bottom: 30%; 
 }
 
+#game-over-message {
+  margin-top: 10%;
+  margin-right: 40%;
+  margin-left: 15%;
+}
+
 /* Overlay */
 
 #overlay {
@@ -292,7 +299,7 @@ div#banner.section {
 
 .title {
   color: #FFF;
-  font-family: 'Open Sans', sans-serif;;
+  font-family: 'Pangolin', cursive;
   animation: rollIn 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
