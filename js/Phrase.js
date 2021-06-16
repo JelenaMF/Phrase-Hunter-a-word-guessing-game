@@ -10,19 +10,23 @@ class Phrase {
 
     //method displays phrase 
     addPhraseToDisplay() {
-        const phraseUL = document.querySelector('#phrase ul'); 
-        for(const char of this.phrase) {
-            const phraseLi = document.createElement('li');
-            phraseUL.appendChild(phraseLi); 
-            phraseLi.classList.add('hide'); 
-            if(char === ' ') {
-                phraseLi.classList.add('space');
-            } else{
-                phraseLi.classList.add('letter');
-                phraseLi.classList.add(char);
-                phraseLi.textContent = char;
-            }
-        } 
+        const div = document.getElementById('phrase');
+ 		const ul = div.firstElementChild;
+ 		const letters = this.phrase.split('');
+ 		letters.forEach((letter) => {
+ 			if(letter === ' '){
+ 				ul.innerHTML += `<li class="space"> </li>`;
+ 			} else {
+ 				ul.innerHTML += `<li class="hide letter ${letter}">${letter}</li>`;
+ 			}
+ 		});
+ 		ul.innerHTML = `<span class="word" style="display:inline-block">` + ul.innerHTML;
+ 		ul.innerHTML += `</span>`;
+ 		const replaceString = `</span><li class="space"> </li><span class="word" style="display:inline-block">`;
+ 		let ulHTML = ul.innerHTML;
+ 		ul.innerHTML = ulHTML.replace(/<li class="space"> <\/li>/g, replaceString);
+
+
     }
   
     //checking for matching letters 
@@ -34,7 +38,7 @@ class Phrase {
         const letters = document.querySelectorAll('.letter');
         for(const char of letters) {
            
-            if (char.innerText === letter) {
+            if (char.innerHTML === letter) {
                char.classList.remove('hide');
                char.classList.add('show');
             } 
