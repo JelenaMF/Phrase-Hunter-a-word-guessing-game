@@ -1,4 +1,4 @@
-@media (min-width:200px) and (max-width: 600px) {
+@media (min-width:200px) and (max-width: 700px) {
     body {
         justify-content: space-evenly;
         flex-direction: column;
@@ -7,6 +7,7 @@
       }
 
     .title{
+        position: fixed;
         font-size: 30px;
         margin-right: 50%;
         margin-bottom: 80%;
@@ -114,20 +115,22 @@
     }
       
     .base-timer {
-        position: sticky;
-        width: 20px;
-        height: 20px;
+        position: absolute;
+        width: 25px;
+        height: 25px;
     }
-
+ #phrase li{
+     position: relative;
+ }
     .base-timer__label {
         position: absolute;
-        width: 35px;
-        height: 35px;
+        width: 20px;
+        height: 20px;
         top: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 15px;
+        font-size: 12px;
     }
       /* keyboard*/
 
@@ -140,11 +143,14 @@
 
     .key {
         font-size: 12px;
+        padding: 10px;
+        margin: 2px;
+        margin-left: auto;
     }
 
     #qwerty.section {
-        margin-left: 50%;
-        
+        margin-left: 40%;
+        justify-content: center;
       }
 
     
