@@ -1,5 +1,6 @@
 /* Main styles */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&Roboto:300');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 /* Variables */
 
@@ -169,7 +170,7 @@ button {
   margin-top: 10%;
   text-transform: uppercase;
   font-size: 60px;
-  font-family: 'Lobster', cursive;
+  font-family: 'Open Sans', sans-serif;;
 }
 
 div#banner.section {
@@ -291,7 +292,7 @@ div#banner.section {
 
 .title {
   color: #FFF;
-  font-family: 'Lobster', cursive;
+  font-family: 'Open Sans', sans-serif;;
   animation: rollIn 0.82s cubic-bezier(.36,.07,.19,.97);
 }
 
