@@ -39,7 +39,7 @@
         justify-content: center;
         border-radius: 5px;
         border: 2px solid;
-        padding: .2rem 5rem;
+        padding: .2rem 1rem;
         -webkit-transition: var(--transition);
         -o-transition: var(--transition);
         transition: var(--transition);
@@ -108,12 +108,13 @@
     #phrase.section {
         max-width: 100%;
         margin: 0 auto;
+        margin-right: 5%;
     }
 
     .letter {
         font-size: var(--font-size-medium);
-        height: 35px;
-        width: 35px;
+        height: 25px;
+        width: 25px;
         padding: 15px 1px 0 1px;
         margin-right: 2px;
         color: transparent;
@@ -186,18 +187,10 @@
         justify-content: center;
       }
 
-    
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100vh;
-        text-align: center;
-        background-color: #1db8b8;
-    }
-
+      img.tries {
+        height: 25px;
+        width: 20px;
+      }
     .start-menu {
 
         justify-content: center;

@@ -102,8 +102,8 @@
 
     .letter {
         font-size: var(--font-size-medium);
-        height: 35px;
-        width: 35px;
+        height: 45px;
+        width: 45px;
         padding: 15px 1px 0 1px;
         margin-right: 2px;
         color: transparent;
@@ -157,29 +157,21 @@
     .keyrow {
         display: flex;
         justify-content: center;  
-        height: 35px;
-        width: 35px;
+        height: 45px;
+        width: 45px;
     }
 
     .key {
-        font-size: 12px;
+        font-size: 15px;
+        padding: 10px;
+        margin: 2px;
+        margin-left: auto;
     }
 
     #qwerty.section {
         margin-left: 50%;
       }
 
-    
-    .main-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-        max-width: 100%;
-        max-height: 100vh;
-        text-align: center;
-        background-color: #1db8b8;
-    }
 
 
   }
