@@ -1,24 +1,31 @@
-@media (min-width:200px) and (max-width: 700px) {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Pangolin&family=Raleway&family=Roboto&display=swap');
+
+@media (min-width: 200px) and (max-width: 700px) {
     body {
+        position: absolute;
         justify-content: space-evenly;
         flex-direction: column;
-        display: flex;
         height: 100vh;
+        margin-bottom: 100%;
+        
       }
 
-    .title{
-        position: fixed;
-        font-size: 30px;
-        margin-right: 50%;
-        margin-bottom: 80%;
+    button {
+        margin-bottom: 10%;
     }
 
+    .title{
+        font-size: 30px;
+        margin-right: 25%;
+        margin-left: 25%;
+    }
+    
     .btn__reset {
-        position: fixed;
         padding: 16px;
-        margin: 50% auto;
-        margin-bottom: 50%;
-        margin-left: 20%;
+        margin: 0% auto;
+        top: 25%;
+        right: 40%;
+        margin-left: 40%;
         background: #f7a964;
         border-radius: 5px;
         font-size: 20px;
@@ -26,6 +33,31 @@
         border-bottom: solid 4px rgba(0, 0, 0, .3);
         border-right: solid 3px rgba(0, 0, 0, .3)
       }
+
+      #rule-container{
+        margin:auto 0;
+        justify-content: center;
+        border-radius: 5px;
+        border: 2px solid;
+        padding: .2rem 5rem;
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
+        transition: var(--transition);
+        margin-left: 20%;
+        margin-right: 20%;
+        text-align: left;
+      }
+      
+    #rules{
+        font-size: 20px;
+        font-family: 'Pangolin', cursive;
+      }
+      
+    .rule{
+        display: list-item;
+        font-size: 15px;
+        font-family: 'Pangolin', cursive;
+    }
 
     #scoreboard {
         margin-bottom: 25%;
@@ -104,8 +136,7 @@
       }
 
     #game-over-message {
-        font-size: 20px;
-        margin-top: 50%;
+        font-size: 30px;
         margin-right: 25%;
         margin-left: 25%;
     }
@@ -120,7 +151,8 @@
         width: 25px;
         height: 25px;
     }
- #phrase li{
+    
+    #phrase li{
      position: relative;
  }
     .base-timer__label {
@@ -166,5 +198,8 @@
         background-color: #1db8b8;
     }
 
+    .start-menu {
 
+        justify-content: center;
+      }
   }

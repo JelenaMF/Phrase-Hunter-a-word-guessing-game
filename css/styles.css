@@ -19,7 +19,8 @@
 /* main */
 
 * {
-  box-sizing: border-box;
+  box-sizing: content-box;
+  justify-content: center;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -27,6 +28,9 @@ body {
   justify-content: space-evenly;
   flex-direction: column;
   height: 100vh;
+  margin: 0;
+  padding:0;
+  text-align: center;
   
 }
 
@@ -105,7 +109,33 @@ li, ol, ul {
   display: inline-block;
 }
 
+#rule-container{
+  margin:auto 0;
+  display: 'block';
+  justify-content: center;
+  margin-top: 10%;
+  border-radius: 5px;
+  border: 2px solid;
+  padding: .2rem 5rem;
+  -webkit-transition: var(--transition);
+  -o-transition: var(--transition);
+  transition: var(--transition);
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 0%;
+  text-align: left;
+}
 
+#rules{
+  font-size: 30px;
+  font-family: 'Pangolin', cursive;
+}
+
+.rule{
+  display: list-item;
+  font-size: 25px;
+  font-family: 'Pangolin', cursive;
+}
 
 button {
   margin: 6px;
@@ -119,16 +149,14 @@ button {
   -o-transition: var(--transition);
   transition: var(--transition);
   cursor: pointer;
+  font-family: 'Pangolin', cursive;
 }
 
 #btn__reset {
-  position: fixed;
 	width: 200px;
   font-size: 25px;
+  font-family: 'Pangolin', cursive;
   font-weight: 300;
-	margin: 0 auto;
-  margin-bottom: 4%;
-  margin-left: 40%;
 }
 
 .main-container {
@@ -153,11 +181,8 @@ button {
 /* Title */
 
 .title{
-  position: fixed;
-  margin-bottom: 30%;
-  margin-right: 25%;
-  margin-left: 25%;
   font-size: 60px;
+  margin-bottom: 15%;
 }
 
 h2 {
@@ -244,8 +269,6 @@ div#banner.section {
 }
 
 .btn__reset {
-  padding: 16px;
-  margin: 50px auto;
   background: #f7a964;
   border-radius: 5px;
   font-size: 20px;
@@ -278,8 +301,10 @@ div#banner.section {
 
 #game-over-message {
   margin-top: 10%;
-  margin-right: 40%;
+  margin-right: 25%;
   margin-left: 15%;
+  font-size: 60px;
+  font-family: 'Pangolin', cursive;
 }
 
 /* Overlay */
@@ -307,12 +332,19 @@ div#banner.section {
   background-color: #469191;
 }
 
+.start-menu {
+  justify-content: center;
+}
+
+
 .start a {
   color: #fff;
 }
 
 .win {
   background-color: var(--color-win);
+  font-size: 50px;
+  font-family: 'Pangolin', cursive;
 }
 
 .win a {

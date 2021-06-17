@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Pangolin&family=Raleway&family=Roboto&display=swap');
+
 @media (min-width:720px) and (max-width: 950px) {
     body {
         justify-content: space-evenly;
@@ -7,23 +9,51 @@
       }
 
     .title{
-        position: fixed;
         font-size: 50px;
-        margin-right: 50%;
-    }
+        bottom: 40%;
+    }  
+
 
     .btn__reset {
-        position: fixed;
         padding: 16px;
-        margin: 50% auto;
-        margin-bottom: 20%;
+        margin: 0% auto;
         margin-left: 45%;
+        top: 25%;
+        right: 40%;
+        margin-left: 40%;
         background: #f7a964;
         border-radius: 5px;
         font-size: 20px;
         cursor: pointer;
         border-bottom: solid 4px rgba(0, 0, 0, .3);
         border-right: solid 3px rgba(0, 0, 0, .3)
+      }
+
+      #rule-container{
+        margin:auto 0;
+        justify-content: center;
+        margin-top: 10%;
+        border-radius: 5px;
+        border: 2px solid;
+        padding: .2rem 5rem;
+        -webkit-transition: var(--transition);
+        -o-transition: var(--transition);
+        transition: var(--transition);
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-bottom: 0%;
+        text-align: left;
+      }
+      
+      #rules{
+        font-size: 25px;
+        font-family: 'Pangolin', cursive;
+      }
+      
+      .rule{
+        display: list-item;
+        font-size: 20px;
+        font-family: 'Pangolin', cursive;
       }
 
     #scoreboard {
@@ -37,9 +67,8 @@
     .header{
         color: #3a3f58;
         margin: 0;
-        margin-top: 20%;
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 50px;
         font-family: 'Pangolin', cursive;
     }
 
@@ -48,18 +77,13 @@
     }
 
     #hint-bttn {
-        margin-left: 50%;
-        padding: 16px;
+        margin-left: 55%;
+        padding: 20px;
         font-size: 20px;
         font-weight: bold;
       }
 
-    #hint-bttn {
-        margin-left: 55%;
-        padding: 10px;
-        font-size: 12px;
-        font-weight: bold;
-    }
+
 
     .space {
         width: 10px;
@@ -102,8 +126,7 @@
       }
 
     #game-over-message {
-        font-size: 20px;
-        margin-top: 50%;
+        font-size: 50px;
         margin-right: 25%;
         margin-left: 25%;
     }

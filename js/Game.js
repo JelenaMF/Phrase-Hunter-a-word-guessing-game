@@ -101,16 +101,18 @@
                const gamePhrase = document.getElementById('phrase');
                gamePhrase.style.display = 'none';
                if(this.checkForWin(true)) {
-                    gameover.innerHTML = 'You Win!!';
+                    gameover.innerHTML = 'Good guessing!! Winner!';
                     display.classList.remove('lose');
                     display.classList.add('win');
                     display.style.display = 'block';
-
+                    document.getElementById('rule-container').style.display='none';
                } else {
                     gameover.innerHTML = `Nice Try, the phrase was "${this.activePhrase.phrase}"`;
                     display.classList.remove('win');
                     display.classList.add('lose');
                     display.style.display = 'block'; 
+                    document.getElementById('rule-container').style.display='none';
+
 
                }
                display.style.display = "flex";

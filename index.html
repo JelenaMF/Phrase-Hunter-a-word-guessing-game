@@ -6,18 +6,30 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
 		<link href="css/normalize.css" rel="stylesheet">
 		<link href="css/animate.css" rel="stylesheet">
-		<link href="css/styles.css" rel="stylesheet">
-		<link href="css/widescreen.css"  rel="stylesheet">
-		<link href="css/smallscreen.css"  rel="stylesheet">
+		<link href="css/styles.css" media="all" rel="stylesheet">
+		<link href="css/widescreen.css" media="screen" rel="stylesheet">
+		<link href="css/smallscreen.css" media="screen" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	</head>
 
 	<body>
 		<div class="main-container">
 			<div id="overlay" class="start">
-				<h2 class="title">What's that Phrase?</h2>
-				<h1 id="game-over-message"></h1>
-				<button id="btn__reset">Start Game</button>
+				<div class="start-menu">
+					<h2 class="title">What's that Phrase?</h2>
+					<button id="btn__reset">Start Game</button>
+					
+					<div id="rule-container">
+						<h1 id="rules"> How to Play:</h1>
+						<ul>
+							<li class="rule"> Use the on screen keyboard or the computer keys to guess the phrase before the time is up.</li>
+							<li class="rule"> Click the hint button if you get stuck.</li>
+						</ul>
+					</div>
+					<h1 id="game-over-message"></h1>
+				</div>
+
+				
 			</div>
 
 			<div id="banner" class="section">

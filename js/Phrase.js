@@ -25,8 +25,6 @@ class Phrase {
  		const replaceString = `</span><li class="space"> </li><span class="word" style="display:inline-block">`;
  		let ulHTML = ul.innerHTML;
  		ul.innerHTML = ulHTML.replace(/<li class="space"> <\/li>/g, replaceString);
-
-
     }
   
     //checking for matching letters 
