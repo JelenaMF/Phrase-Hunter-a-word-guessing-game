@@ -12,12 +12,14 @@ class Phrase {
     addPhraseToDisplay() {
         const div = document.getElementById('phrase');
  		const ul = div.firstElementChild;
+         console.log(div);
  		const letters = this.phrase.split('');
+         console.log(letters)
  		letters.forEach((letter) => {
  			if(letter === ' '){
  				ul.innerHTML += `<li class="space"> </li>`;
  			} else {
- 				ul.innerHTML += `<li class="hide letter ${letter}">${letter}</li>`;
+ 				ul.innerHTML += `<li class="hide letter ${letter}"></li>`;
  			}
  		});
  		ul.innerHTML = `<span class="word" style="display:inline-block">` + ul.innerHTML;
@@ -33,12 +35,15 @@ class Phrase {
     }
     //shows matching letters 
     showMatchedLetter(letter) {
-        const letters = document.querySelectorAll('.letter');
+        const letters = document.querySelectorAll(`.${letter}`);
         for(const char of letters) {
-           
+            console.log(letters);
+
+           char.textContent = `${letter}`
             if (char.innerHTML === letter) {
                char.classList.remove('hide');
                char.classList.add('show');
+               console.log(char)
             } 
         }
         
