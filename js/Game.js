@@ -17,7 +17,7 @@
           createPhrases(phrases, hint) {
                //add a hint property to display to user 
                const phrase = [new Phrase('Look at the flowers', 'from the TV series: The Walking Dead. Said by Carol to a little girl.'),
-                              new Phrase('Pull it together', 'used when someone is losing their mind'),
+                              new Phrase('Pull yourself together', 'used when someone is losing their mind'),
                               new Phrase('Speak of the devil', 'used when someone shows up after being talked about'),
                               new Phrase('Cut to the chase', 'used when a story is taking too long to be told.'),
                               new Phrase('Hold your horses', ' another saying for "be patient"'),
@@ -30,7 +30,9 @@
                               new Phrase('Bringing home the bacon', 'used when going or coming from work'),
                               new Phrase('Life dealt him a bad hand', 'used when someone experiences a hard life'),
                               new Phrase('Wrong hole', 'when your partner tries to enter an exit only opening'),
-                              new Phrase('Shake it like a polaroid picture', 'from an Outcast song in Y2K')
+                              new Phrase('Shake it like a polaroid picture', 'from an Outcast song in Y2K'),
+                              new Phrase('Happy Camper', 'A person who enjoys the outdoors and is camping')
+
                          ];
                return phrase;
           }
