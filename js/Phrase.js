@@ -38,7 +38,6 @@ class Phrase {
         const letters = document.querySelectorAll(`.${letter}`);
         for(const char of letters) {
             console.log(letters);
-
            char.textContent = `${letter}`
             if (char.innerHTML === letter) {
                char.classList.remove('hide');
