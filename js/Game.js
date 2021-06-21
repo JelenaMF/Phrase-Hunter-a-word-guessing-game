@@ -26,7 +26,11 @@
                               new Phrase('Show me the money', 'used when someone should pay you'),
                               new Phrase('Break a leg', ' a term for good luck but it could be a threat depending on who says it.'),
                               new Phrase('Cutting corners', 'used when someone is cheating or using a short cut'),
-                              new Phrase('Hit the sack', 'used for used for going to bed')
+                              new Phrase('Hit the sack', 'used for going to bed'),
+                              new Phrase('Bringing home the bacon', 'used when going or coming from work'),
+                              new Phrase('Life dealt him a bad hand', 'used when someone experiences a hard life'),
+                              new Phrase('Wrong hole', 'when your partner tries to enter an exit only opening'),
+                              new Phrase('Shake it like a polaroid picture', 'from an Outcast song in Y2K')
                          ];
                return phrase;
           }
