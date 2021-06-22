@@ -17,7 +17,7 @@ class Phrase {
  			if(letter === ' '){
  				ul.innerHTML += `<li class="space"> </li>`;
  			} else {
- 				ul.innerHTML += `<li class="hide letter ${letter}">&#8201</li>`;
+ 				ul.innerHTML += `<li class="hide letter ${letter}">${letter}</li>`;
  			}
  		});
  		ul.innerHTML = `<span class="word" style="display:inline-block">` + ul.innerHTML;
