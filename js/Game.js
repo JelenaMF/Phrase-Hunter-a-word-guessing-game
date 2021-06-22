@@ -21,7 +21,7 @@
                               new Phrase('Speak of the devil', 'used when someone shows up after being talked about'),
                               new Phrase('Cut to the chase', 'used when a story is taking too long to be told.'),
                               new Phrase('Hold your horses', ' another saying for "be patient"'),
-                              new Phrase('Close but no cigar', 'is used when a goal is not met.'),
+                              new Phrase('Close but no cigar', 'used when a goal is not met.'),
                               new Phrase('I want to rock', 'used when someone wants to party... an 80s phrase'),
                               new Phrase('Show me the money', 'used when someone should pay you'),
                               new Phrase('Break a leg', ' a term for good luck but it could be a threat depending on who says it.'),
@@ -41,17 +41,20 @@
           getRandomPhrase() {
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
                const randomPhrase = this.phrase[phraseIndex];
+               if(randomPhrase != this.activePhrase){
+                    return randomPhrase;
+               }
                return randomPhrase;
           }
 
           startGame() {
-              
                document.getElementById('overlay').style.display = 'none';
                this.activePhrase = this.getRandomPhrase();
                this.activePhrase.addPhraseToDisplay();
                document.getElementById('timer').style.display = '';
                startTimer(); 
                this.reset();
+               console.log(this.activePhrase);
 
           }
            /*clicked/chosen letter is captured and disabled 
