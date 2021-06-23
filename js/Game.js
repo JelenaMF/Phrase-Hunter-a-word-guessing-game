@@ -54,7 +54,6 @@
                document.getElementById('timer').style.display = '';
                startTimer(); 
                this.reset();
-               console.log(this.activePhrase);
 
           }
            /*clicked/chosen letter is captured and disabled 

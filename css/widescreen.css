@@ -1,34 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Pangolin&family=Raleway&family=Roboto&display=swap');
 
-@media (min-width:720px) and (max-width: 950px) {
+@media (min-width:720px) and (max-width: 1100px) {
     body {
         justify-content: space-evenly;
         flex-direction: column;
         display: flex;
         height: 100vh;
       }
+      .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        max-height: 100vh;
+        text-align: center;
+        background-color: #1db8b8;
 
-    .title{
-        font-size: 50px;
-        bottom: 40%;
-    }  
-
-
-    .btn__reset {
-        padding: 16px;
-        margin: 0% auto;
-        margin-left: 45%;
-        top: 25%;
-        right: 40%;
-        margin-left: 40%;
-        background: #f7a964;
-        border-radius: 5px;
-        font-size: 20px;
-        cursor: pointer;
-        border-bottom: solid 4px rgba(0, 0, 0, .3);
-        border-right: solid 3px rgba(0, 0, 0, .3)
       }
 
+    .title{
+        font-size: 40px;
+    }  
       #rule-container{
         margin:auto 0;
         justify-content: center;
@@ -39,20 +31,18 @@
         -webkit-transition: var(--transition);
         -o-transition: var(--transition);
         transition: var(--transition);
-        margin-left: 20%;
-        margin-right: 20%;
         margin-bottom: 0%;
         text-align: left;
       }
       
       #rules{
-        font-size: 25px;
+        font-size: 30px;
         font-family: 'Pangolin', cursive;
       }
       
       .rule{
         display: list-item;
-        font-size: 20px;
+        font-size: 25px;
         font-family: 'Pangolin', cursive;
       }
 
@@ -67,6 +57,7 @@
     .header{
         color: #3a3f58;
         margin: 0;
+        margin-top: 10%;
         text-transform: uppercase;
         font-size: 50px;
         font-family: 'Pangolin', cursive;
@@ -75,15 +66,6 @@
     #hints {
         padding: 10px;
     }
-
-    #hint-bttn {
-        margin-left: 55%;
-        padding: 20px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-
 
     .space {
         width: 10px;
@@ -101,6 +83,7 @@
     }
 
     .letter {
+        user-select: none;
         font-size: var(--font-size-medium);
         height: 45px;
         width: 45px;
@@ -112,14 +95,21 @@
         animation: jackInTheBox 0.82s cubic-bezier(.36,.07,.19,.97), both;
     }
     
+    #btn__reset {
+      width: 200px;
+      font-size: 25px;
+      font-family: 'Pangolin', cursive;
+      font-weight: 300;
+      border-radius: 5px;
 
+    }
     .show {
         color: #fff;
         background-color: #8c64f8;
-        font-size: 10px;
-        height: 35px;
-        width: 35px;
-        padding: 20px 1px 0 1px;
+        font-size: 20px;
+        height: 45px;
+        width: 45px;
+        padding: 15px 1px 0 1px;
         margin-right: 2px;
         border-radius: 5px;
 
@@ -133,24 +123,25 @@
 
     #timer {
         display: block;
+        margin-top: 20px;
         margin-left: 50%;
     }
       
     .base-timer {
         position: sticky;
-        width: 20px;
-        height: 20px;
+        width: 45px;
+        height: 45px;
     }
 
     .base-timer__label {
         position: absolute;
-        width: 35px;
-        height: 35px;
+        width: 40px;
+        height: 40px;
         top: 0;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 15px;
+        font-size: 20px;
     }
       /* keyboard*/
 
@@ -162,14 +153,14 @@
     }
 
     .key {
-        font-size: 15px;
-        padding: 10px;
-        margin: 2px;
-        margin-left: auto;
-    }
+      font-size: 18px;
+      padding: 20px;
+      margin: 5px;
+      margin-left: auto;
+  }
 
-    #qwerty.section {
-        margin-left: 50%;
-      }
+      .start-menu {
+        margin-right: 40%;
+          }
 
   }

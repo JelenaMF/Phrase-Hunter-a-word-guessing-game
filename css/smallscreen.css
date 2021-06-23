@@ -1,13 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Pangolin&family=Raleway&family=Roboto&display=swap');
 
-@media (min-width: 200px) and (max-width: 700px) {
+@media (min-width: 200px) and (max-width: 720px) {
     body {
         position: absolute;
         justify-content: space-evenly;
         flex-direction: column;
         height: 100vh;
         margin-bottom: 100%;
-        
+        max-width: 100%;
+      }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        max-height: 100vh;
+        text-align: center;
+        background-color: #1db8b8;
+        max-width: max-content;
       }
 
     button {
@@ -16,22 +27,12 @@
 
     .title{
         font-size: 30px;
-        margin-right: 25%;
-        margin-left: 25%;
     }
     
-    .btn__reset {
-        padding: 16px;
-        margin: 0% auto;
-        top: 25%;
-        right: 40%;
-        margin-left: 40%;
-        background: #f7a964;
-        border-radius: 5px;
-        font-size: 20px;
-        cursor: pointer;
-        border-bottom: solid 4px rgba(0, 0, 0, .3);
-        border-right: solid 3px rgba(0, 0, 0, .3)
+    #btn__reset {
+        font-size: 15px;
+        font-family: 'Pangolin', cursive;
+        font-weight: 300;
       }
 
       #rule-container{
@@ -43,8 +44,7 @@
         -webkit-transition: var(--transition);
         -o-transition: var(--transition);
         transition: var(--transition);
-        margin-left: 20%;
-        margin-right: 20%;
+    
         text-align: left;
       }
       
@@ -70,7 +70,6 @@
     .header{
         color: #3a3f58;
         margin: 0;
-        margin-top: 20%;
         text-transform: uppercase;
         font-size: 30px;
         font-family: 'Pangolin', cursive;
@@ -81,20 +80,10 @@
         padding: 10px;
     }
 
-    #hint-bttn {
-        margin-left: 50%;
-        padding: 16px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-    #hint-bttn {
-        margin-left: 55%;
-        padding: 10px;
-        font-size: 12px;
+    #hint {
+        font-size: 15px;
         font-weight: bold;
     }
-
     .space {
         width: 10px;
       }
@@ -112,10 +101,11 @@
     }
 
     .letter {
-        font-size: var(--font-size-medium);
+        -webkit-user-select: none;
+        font-size: 15px;
         height: 25px;
         width: 25px;
-        padding: 15px 1px 0 1px;
+        padding: 10px 1px 0 1px;
         margin-right: 2px;
         color: transparent;
         background: var(--color-neutral-light);
@@ -127,10 +117,10 @@
     .show {
         color: #fff;
         background-color: #8c64f8;
-        font-size: 10px;
-        height: 35px;
-        width: 35px;
-        padding: 20px 1px 0 1px;
+        font-size: 15px;
+        height: 25px;
+        width: 25px;
+        padding: 10px 1px 0 1px;
         margin-right: 2px;
         border-radius: 5px;
 
@@ -171,24 +161,25 @@
     .keyrow {
         display: flex;
         justify-content: center;  
-        height: 35px;
-        width: 35px;
+        height: 25px;
+        width: 25px;
     }
 
     .key {
         font-size: 12px;
-        padding: 10px;
+        padding: 8px;
         margin: 2px;
         margin-left: auto;
     }
-
-    #qwerty.section {
-        margin-left: 40%;
-        justify-content: center;
-      }
-
+    
     .start-menu {
+        margin-bottom: 30%;
+        margin-right: 45px;   
+        width: fit-content; 
+    }
 
-        justify-content: center;
+      .section {
+        width: 100%;
+      
       }
   }
