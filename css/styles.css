@@ -323,6 +323,8 @@ div#banner.section {
 }
 
 .start-menu {
+  margin-bottom: 50;
+  margin-left: 20%;
   width: fit-content;
 }
 

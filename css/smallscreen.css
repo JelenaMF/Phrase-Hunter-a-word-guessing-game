@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Pangolin&family=Raleway&family=Roboto&display=swap');
 
-@media (min-width: 200px) and (max-width: 720px) {
+@media  (min-width: 200px) and (max-width: 720px) {
     body {
         position: absolute;
         justify-content: space-evenly;
@@ -174,7 +174,7 @@
     
     .start-menu {
         margin-bottom: 30%;
-        margin-right: 45px;   
+        margin-right: 30%;   
         width: fit-content; 
     }
 
