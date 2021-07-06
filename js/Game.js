@@ -41,9 +41,6 @@
           getRandomPhrase() {
                const phraseIndex = Math.floor(Math.random() * this.phrase.length);
                const randomPhrase = this.phrase[phraseIndex];
-               if(randomPhrase != this.activePhrase){
-                    return randomPhrase;
-               }
                return randomPhrase;
           }
 
@@ -54,8 +51,18 @@
                document.getElementById('timer').style.display = '';
                startTimer(); 
                this.reset();
-
           }
+
+          //prevent displaying same phrase
+
+               // removePrev(phrase){
+               //     for(let i = 0; i < this.phrase.length; i++) {
+               //          const phrase = this.phrase[i];
+               //          if(phrase === this.activePhrase){
+               //               console.log(this.activePhrase);
+               //          }
+               //     }
+               // }
            /*clicked/chosen letter is captured and disabled 
                checks if selected letter matches a letter in the activePhrase 
                giving it a classList of wrong/chosen depending on the result

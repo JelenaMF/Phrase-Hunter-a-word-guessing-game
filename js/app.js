@@ -12,6 +12,7 @@ const startButton = document.querySelector('#btn__reset');
 startButton.addEventListener('click', (e) => {
     game = new Game();
     game.startGame();
+    //game.removePrev();
     const hint = document.getElementById('hint');
     hint.innerText= `Hint: This phrase is ${game.activePhrase.hint}`;
     hint.style.display = 'block';
